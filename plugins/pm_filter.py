@@ -1663,7 +1663,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/d10f6d16ae9927109feca.jpg")
+            InputMediaPhoto("https://graph.org/file/2e6ff3d1a60a8afcb4306.jpg")
         ) 
         await query.message.edit_text(
             text=script.CHECK_TXT,
@@ -1672,7 +1672,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "plan1":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/Erotixe"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1") 
@@ -1690,7 +1690,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/d10f6d16ae9927109feca.jpg")
+            InputMediaPhoto("https://graph.org/file/2e6ff3d1a60a8afcb4306.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN1_TXT,
@@ -1699,7 +1699,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan2":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/Erotixe"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1")                 
@@ -1717,7 +1717,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/d10f6d16ae9927109feca.jpg")
+            InputMediaPhoto("https://graph.org/file/2e6ff3d1a60a8afcb4306.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN2_TXT,
@@ -1726,7 +1726,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan3":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/Erotixe"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1")
@@ -1744,7 +1744,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/d10f6d16ae9927109feca.jpg")
+            InputMediaPhoto("https://graph.org/file/2e6ff3d1a60a8afcb4306.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN3_TXT,
