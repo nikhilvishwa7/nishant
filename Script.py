@@ -24,7 +24,7 @@ class script(object):
 
 Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛᴜʀᴇs⚡️
 
-Fork our repository and give star ⭐- <a href='https://t.me/team_netflix'>📥 ᴄʟɪᴄᴋ ʜᴇʀᴇ 📥</a></b>
+Fork our repository and give star ⭐- <a href='https://t.me/team_netflix'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
 """
     
     KUSHAL_TXT = """ 
@@ -66,7 +66,7 @@ Hᴇʟᴘ : <b>Sᴇᴛᴛɪɴɢꜱ</b>
 
 <b>Nᴏᴛᴇ</b>: ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴍᴏᴅᴇ ᴛᴏ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜰᴏɴᴛꜱ ꜱᴛʏʟᴇ, ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ʟɪᴋᴇ ᴛʜɪꜱ ꜰᴏʀᴍᴀᴛ. 
 
-<code>/font TG_LINKS_CHANNEL</code>"""
+<code>/font Team Netflix</code>"""
 
     MANUELFILTER_TXT = """Hᴇʟᴘ : <b>Fɪʟᴛᴇʀꜱ</b>
     
@@ -284,12 +284,12 @@ Mᴏᴠɪᴇs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Rᴇᴀsᴏɴ:
 <b>Query: {query}
 IMDb Data:
 
-🧿 𝐓𝐈𝐓𝐋𝐄: <a href={url}>{title}</a>
-🎭 𝐆𝐄𝐍𝐑𝐄𝐒: {genres}
-📆 𝐘𝐄𝐀𝐑: <a href={url}/releaseinfo>{year}</a>
-🌟 𝐑𝐀𝐓𝐈𝐍𝐆: <a href={url}/ratings>{rating}</a> / 10 (Based on {votes} user ratings)</b>
-☀️ 𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄 : <code>{languages}</code></a>
-📀 𝐑𝐔𝐍𝐓𝐈𝐌𝐄: {runtime} Minutes</a>
+‣ 𝐓𝐈𝐓𝐋𝐄: <a href={url}>{title}</a>
+‣ 𝐆𝐄𝐍𝐑𝐄𝐒: {genres}
+‣ 𝐘𝐄𝐀𝐑: <a href={url}/releaseinfo>{year}</a>
+‣ 𝐑𝐀𝐓𝐈𝐍𝐆: <a href={url}/ratings>{rating}</a> / 10 (Based on {votes} user ratings)</b>
+‣ 𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄 : <code>{languages}</code></a>
+‣ 𝐑𝐔𝐍𝐓𝐈𝐌𝐄: {runtime} Minutes</a>
 
 <b>👨‍💼 Requested by : {message.from_user.mention}</b>"""
 
@@ -324,28 +324,28 @@ IMDb Data:
 ᴘʟᴀɴ ʙ : 𝟷 ᴍᴏɴᴛʜ / ₹𝟹𝟿
 ᴘʟᴀɴ ᴄ : 𝟷 ʏᴇᴀʀ / ₹𝟹𝟼𝟶
 
-➻ ᴜᴘɪ ɪᴅ : @veldxd
+➻ ᴜᴘɪ ɪᴅ : @Mikey_0x ()
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ ᴀɴᴅ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ.</b>"""
 
     PLAN1_TXT = """
 <b>🔥 ᴘᴀʏ ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ ғᴇᴇs ₹𝟷𝟻 ғᴏʀ 𝟷 ᴡᴇᴇᴋ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ᴡɪᴛʜ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴀɴᴅ ᴍᴀɴʏ ᴍᴏʀᴇ. 
 
-➻ ᴜᴘɪ ɪᴅ : @veldxd
+➻ ᴜᴘɪ ɪᴅ : @Mikey_0x (Contact for premium)
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ ᴀɴᴅ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ.</b>"""
 
     PLAN2_TXT = """
 <b>🔥 ᴘᴀʏ ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ ғᴇᴇs ₹𝟹𝟿 ғᴏʀ 𝟷 ᴍᴏɴᴛʜ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ᴡɪᴛʜ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴀɴᴅ ᴍᴀɴʏ ᴍᴏʀᴇ. 
 
-➻ ᴜᴘɪ ɪᴅ : @veldxd
+➻ ᴜᴘɪ ɪᴅ : @Mikey_0x (Contact for premium)
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ ᴀɴᴅ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ.</b>"""
 
     PLAN3_TXT = """
 <b>🔥 ᴘᴀʏ ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ ғᴇᴇs ₹𝟹𝟼𝟶 ғᴏʀ 𝟷 ʏᴇᴀʀ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ᴡɪᴛʜ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴀɴᴅ ᴍᴀɴʏ ᴍᴏʀᴇ. 
 
-➻ ᴜᴘɪ ɪᴅ : @veldxd
+➻ ᴜᴘɪ ɪᴅ : @Mikey_0x (Contact for premium)
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ ᴀɴᴅ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ.</b>"""
 
