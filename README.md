@@ -125,9 +125,9 @@ python3 -m Adarsh
 </h3>
 
 - <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/adarsh-goel/FileStreamBot-pro) </b>
-- <b>[ɴᴏʙɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://youtube.com/) </b>
+- <b>[ᴍɪᴋᴇʏ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://t.me/team_netflix) </b>
  
-<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://telegram.me/NobiDeveloper) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ɴᴏʙɪᴛᴀ sᴛʀᴇᴀᴍ ʙᴏᴛ ᴜsᴇꜰᴜʟ & ᴩᴏᴡᴇʀꜰᴜʟ 🖤 </b>
+<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://telegram.me/anteikuofficial) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ʟᴜᴄʏ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ ᴜsᴇꜰᴜʟ & ᴩᴏᴡᴇʀꜰᴜʟ 🖤 </b>
 
 
 ##  𝑵𝒐𝒕𝒆
