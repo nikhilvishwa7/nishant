@@ -15,7 +15,7 @@
 <details>
   <summary><b>ꜰᴇᴀᴛᴜʀᴇs :</b></summary>
   
-
+## ꜰᴇᴀᴛᴜʀᴇs
 - [x] 𝐼𝑀𝐷𝐵 𝑇𝑒𝑚𝑝𝑙𝑎𝑡𝑒 𝑆𝑒𝑡
 - [x] 𝐼𝑛𝑑𝑒𝑥𝑒𝑠 𝐹𝑖𝑙𝑒𝑠 𝑎𝑏𝑜𝑣𝑒 2𝐺𝐵
 - [x] 𝑃𝑟𝑒𝐷𝑉𝐷 𝑎𝑛𝑑 𝐶𝑎𝑚𝑅𝑖𝑝 𝐷𝑒𝑙𝑒𝑡𝑒 𝑀𝑜𝑑𝑒
@@ -84,25 +84,25 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://github.com/NobiDeveloper/Nobita-Stream-Bot">
+<p align="center"><a href="https://github.com/PHOENIX-MONARCH/AUTOFILTER">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy On Heroku">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/NobiDeveloper/Nobita-Stream-Bot&branch=main&name=Nobita-Stream-Bot">
+<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/PHOENIX-MONARCH/AUTOFILTER&branch=main&name=main">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 」─
 </h3>
-<p align="center"><a href="https://railway.app/deploy?template=https://github.com/NobiDeveloper/Nobita-Stream-Bot"">
+<p align="center"><a href="https://railway.app/deploy?template=https://github.com/PHOENIX-MONARCH/AUTOFILTER">
      <img height="45px" src="https://railway.app/button.svg">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴇɴᴅᴇʀ 」─
 </h3>
-<p align="center"><a href="https://render.com/deploy?repo=https://github.com/NobiDeveloper/Nobita-Stream-Bot">
+<p align="center"><a href="https://render.com/deploy?repo=https://github.com/PHOENIX-MONARCH/AUTOFILTER">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a></p>
 <h3 align="center">
@@ -110,8 +110,8 @@
 </h3>
 <p>
 <pre>
-git clone https://github.com/NobiDeveloper/Nobita-Stream-Bot
-cd Nobita-Stream-Bot
+git clone https://github.com/PHOENIX-MONARCH/AUTOFILTER
+cd AUTOFILTER
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
@@ -124,8 +124,8 @@ python3 -m Adarsh
 <h3>「 ᴄʀᴇᴅɪᴛs 」
 </h3>
 
-- <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/adarsh-goel)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/adarsh-goel/FileStreamBot-pro) </b>
-- <b>[ɴᴏʙɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://github.com/NobiDeveloper)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://youtube.com/@NobiDeveloper) </b>
+- <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/adarsh-goel/FileStreamBot-pro) </b>
+- <b>[ɴᴏʙɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://youtube.com/) </b>
  
 <b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://telegram.me/NobiDeveloper) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ɴᴏʙɪᴛᴀ sᴛʀᴇᴀᴍ ʙᴏᴛ ᴜsᴇꜰᴜʟ & ᴩᴏᴡᴇʀꜰᴜʟ 🖤 </b>
 
