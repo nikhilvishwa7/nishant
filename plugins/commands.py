@@ -28,8 +28,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• ᴘʀɪᴍᴇ sᴇʀɪᴇs', url="https://t.me/netflix_complex"),
-                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+MAHMbrvUNuc5YmZl')
+                    InlineKeyboardButton('• sᴇʀɪᴇs ғʟɪx •', url="https://t.me/netflix_complex"),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ғʟɪx •', url='https://t.me/movieflix_original')
                 ],[
                     InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url=CHNL_LNK)
                   ]]
@@ -409,7 +409,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '@Team_Netflix' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -430,7 +430,7 @@ async def start(client, message):
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = '' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '@Team_Netflix' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
