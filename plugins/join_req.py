@@ -8,7 +8,7 @@ from info import ADMINS, REQST_CHANNEL
 db = JoinReqs
 logger = getLogger(__name__)
 
-@Client.on_chat_join_request(filters.chat(REQ_CHANNEL if REQ_CHANNEL else "self"))
+@Client.on_chat_join_request(filters.chat(REQST_CHANNEL if REQST_CHANNEL else "self"))
 async def join_reqs(client, join_req: ChatJoinRequest):
 
     if db().isActive():
