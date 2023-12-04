@@ -1672,7 +1672,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "plan1":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/veldxd"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1") 
@@ -1699,7 +1699,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan2":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/veldxd"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1")                 
@@ -1726,10 +1726,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan3":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/mikey_0x"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/veldxd"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
-            InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/+haBJYzvJaOEwY2Q1")
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1756,7 +1756,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('❗❗ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data='disclaimer')
         ], [
-            InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='source'),
+            InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='source'),
             InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ', url=CHNL_LNK)
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
