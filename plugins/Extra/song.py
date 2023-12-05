@@ -49,7 +49,7 @@ def song(client, message):
         open(thumb_name, 'wb').write(thumb.content)
 
 
-        performer = f"[Autofilter - Master]" 
+        performer = f"[ᴛᴇᴀᴍ ɴᴇᴛғʟɪx]" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -66,7 +66,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴 ›› [ᴄʜᴀɴɴᴇʟ](https://youtube.com/@MovieVillaYT)**\n**𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 ›› [ᴍᴏᴠɪᴇ ᴠɪʟʟᴀ](https://telegram.me/MovieVillaYT)**'
+        rep = '**sᴇʀɪᴇs ›› [ᴄʜᴀɴɴᴇʟ](https://t.me/seriesflix_original)**\n**ᴘᴏᴡᴇʀᴇᴅ ʙʏ ›› [ ᴛᴇᴀᴍ ɴᴇᴛғʟɪx ](https://telegram.me/team_netflix)**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -138,9 +138,9 @@ async def vsong(client, message: Message):
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})
-**𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 :** {message.from_user.mention}
-**𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 :** [ᴍᴏᴠɪᴇ ᴠɪʟʟᴀ](https://youtube.com/@MovieVillaYT)
+**ᴛɪᴛʟᴇ :** [{thum}]({mo})
+**ᴘᴏᴡᴇʀᴇᴅ ʙʏ :** {message.from_user.mention}
+**ᴘᴏᴡᴇʀᴇᴅ ʙʏ :** [ᴍᴏᴠɪᴇ ᴠɪʟʟᴀ](https://t.me/team_netflix)
 """
     await client.send_video(
         message.chat.id,
