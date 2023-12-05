@@ -5,10 +5,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQue
 from pyrogram.handlers import MessageHandler
 from pyshorteners import Shortener
 
-BITLY_API = os.environ.get("BITLY_API", "8df1df8c23f719e5cf97788cc2d40321ea30092b")
-CUTTLY_API = os.environ.get("CUTTLY_API", "f64dffbde033b6c307387dd50b7c76e505f1c")
-SHORTCM_API = os.environ.get("SHORTCM_API", "pk_...NIZv")
-GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9007a7")
+SHRINKFOREARN_API = os.environ.get("SHRINKFOREARN_API", "f598eb0858fc5fb48dc1cb2681e50e8cf08f11fa")
+PUBLICEARN_API = os.environ.get("PUBLICEARN_API", "12acd92137fc0825775940b8ad5375a5ce63d71f")
 
 reply_markup = InlineKeyboardMarkup(
         [[
@@ -78,14 +76,14 @@ async def short(link):
     except Exception as error:
         print(f"Click.ru error :- {error}")
     
-    # Cutt.ly shorten
-    if CUTTLY_API:
+    # shrinkforearn.in shorten
+    if SHRINKFOREARN_API:
         try:
-            s = Shortener(api_key=CUTTLY_API)
-            url = s.cuttly.short(link)
-            shorten_urls += f"\n**Cutt.ly :-** {url}"
+            s = Shortener(api_key=SHRINKFOREARN_API)
+            url = s.shrinkforearn.short(link)
+            shorten_urls += f"\n**shrinkforearn.in :-** {url}"
         except Exception as error:
-            print(f"Cutt.ly error :- {error}")
+            print(f"shrinkforearn.in error :- {error}")
     
     # Da.gd shorten
     try:
@@ -127,14 +125,14 @@ async def short(link):
     except Exception as error:
         print(f"Qps.ru error :- {error}")
     
-    # Short.cm shorten
-    if SHORTCM_API:
+    # publicearn.in shorten
+    if PUBLICEARN_API:
         try:
-            s = Shortener(api_key=SHORTCM_API)
-            url = s.shortcm.short(link)
-            shorten_urls += f"\n**Short.cm :-** {url}"
+            s = Shortener(api_key=PUBLICEARN_API)
+            url = s.publicearn.short(link)
+            shorten_urls += f"\n**publicearn.in :-** {url}"
         except Exception as error:
-            print(f"Short.cm error :- {error}")
+            print(f"publicearn.in error :- {error}")
     
     # Send the text
     try:
