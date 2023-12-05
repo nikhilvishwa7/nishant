@@ -47,18 +47,6 @@ async def inline_short(bot, update):
         inline_query_id=update.id,
         results=answers
     )
-
-async def short(link):
-    shorten_urls = "**--Shorted URLs--**\n"
-    
-    # Bit.ly shorten
-    if BITLY_API:
-        try:
-            s = Shortener(api_key=BITLY_API)
-            url = s.bitly.short(link)
-            shorten_urls += f"\n**Bit.ly :-** {url}"
-        except Exception as error:
-            print(f"Bit.ly error :- {error}")
     
     # Chilp.it shorten
     try:
