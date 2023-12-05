@@ -1602,13 +1602,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ꜰɪʟᴛᴇʀꜱ •', callback_data='filters'),
             InlineKeyboardButton('• ꜰɪʟᴇ ꜱᴛᴏʀᴇ •', callback_data='store_file')
         ], [
-            InlineKeyboardButton('• ᴛᴇʟᴇɢʀᴀᴘʜ •', callback_data='tele')
+            InlineKeyboardButton('• ᴛᴇʟᴇɢʀᴀᴘʜ •', callback_data='tele'),
             InlineKeyboardButton('• ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data='kushal')
         ], [
             InlineKeyboardButton('• ᴄᴏɴɴᴇᴄᴛɪᴏɴ •️', callback_data='coct'),
             InlineKeyboardButton('• ᴇxᴛʀᴀ ᴍᴏᴅꜱ •', callback_data='extra')
         ], [
-            InlineKeyboardButton('• ꜰᴏɴᴛ •', callback_data='font')
+            InlineKeyboardButton('• ꜰᴏɴᴛ •', callback_data='font'),
             InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='source')
         ], [
             InlineKeyboardButton('• ʀᴜʟᴇꜱ •', callback_data='rule'), 
