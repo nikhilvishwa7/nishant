@@ -431,6 +431,37 @@ IMDb Data:
 
 /report 𝗈𝗋 @admin - 𝖳𝗈 𝗋𝖾𝗉𝗈𝗋𝗍 𝖺 𝗎𝗌𝖾𝗋 𝗍𝗈 𝗍𝗁𝖾 𝖺𝖽𝗆𝗂𝗇𝗌 (𝗋𝖾𝗉𝗅𝗒 𝗍𝗈 𝖺 𝗆𝖾𝗌𝗌𝖺𝗀𝖾).</b>"""
 
+    MIKEY = """
+<b>ᴍɪᴋᴇʏ'ꜱ ʙɪᴏ 🙋‍♂
+
+╰─➩ ᴍʏ ɴᴀᴍᴇ - ᴍɪᴋᴇʏ (real name nhi btaunga)
+╰─➩ ᴜsᴇʀɴᴀᴍᴇ - <a href='https://t.me/sewxiy'>sᴇᴡxɪʏ</a>
+╰─➩ ᴘᴍ. ᴅᴍ ʟɪɴᴋ - <a href='https://t.me/sewxiy'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+╰─➩ ᴅᴏʙ - 16 | 03 | 2006
+╰─➩ ʟᴇᴠᴇʟ - 12th 
+╰─➩ ᴀɢᴇ - ∞
+╰─➩ ʜᴏʙɪᴇꜱ - ᴍᴀɴɢᴀꜱ, ᴀɴɪᴍᴇs, ᴡᴇʙsᴇʀɪᴇs
+╰─➩ ᴘʟᴀᴄᴇ - ɪɴᴅɪᴀ, ᴅᴇʟʜɪ
+╰─➩ ᴋɴᴏᴡɴ ʟᴀɴɢᴜᴀɢᴇꜱ - ᴇɴɢʟɪꜱʜ, ʜɪɴᴅɪ, ᴊᴀᴘᴀɴɪ</b>"""
+
+    GEN_PASS = """<b>ᴘᴀssᴡᴏʀᴅ ɢᴇɴᴇʀᴀᴛᴏʀ</b>
+
+There Is Nothing To Know More. Send Me The Limit Of Your Password.
+
+- I Will Give The Password Of That Limit.
+
+➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝:
+
+• /genpassword or /genpw 20
+
+NOTE:
+• Only Digits Are Allowed
+• Maximum Allowed Digits Till 84 
+  (I Can't Generate Passwords Above The Length 84)
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
