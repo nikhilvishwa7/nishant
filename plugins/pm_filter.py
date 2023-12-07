@@ -1600,17 +1600,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='source'),
             InlineKeyboardButton('• ʀᴜʟᴇꜱ •', callback_data='rule')
          ], [
-            InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='ytthumb'),
+            InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='YTTHUMB'),
             InlineKeyboardButton('• ʏᴛ-ᴠɪᴅ •', callback_data='video'),
             InlineKeyboardButton('• ʏᴛ-ᴛᴀɢꜱ •', callback_data='yttags')
          ], [
-            InlineKeyboardButton('• ᴏᴡɴᴇʀ •', callback_data='mikey'),
-            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='owner_info'),
-            InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='github')
+            InlineKeyboardButton('• ᴏᴡɴᴇʀ •', callback_data='MIKEY'),
+            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='OWNER_INFO'),
+            InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='GITHUB')
          ], [
             InlineKeyboardButton('• ᴀɴᴛᴇɪᴋᴜ •', url="https://t.me/AnteikuOfficial/161"),
             InlineKeyboardButton('• ʀᴇᴘᴏʀᴛ •', callback_data='report'),
-            InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
+            InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='GEN_PASS')
          ], [
             InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='settings'),
             InlineKeyboardButton('• ꜱᴛɪᴄᴋᴇʀ •', callback_data='sticker'), 
