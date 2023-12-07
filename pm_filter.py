@@ -1616,7 +1616,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ʏᴛ-ᴛᴀɢꜱ •', callback_data='yttags')
          ], [
             InlineKeyboardButton('• ᴏᴡɴᴇʀ •', callback_data='mikey'),
-            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='owner_info'),
+            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='donate'),
             InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='github')
          ], [
             InlineKeyboardButton('• ᴋᴀɴɢ •', callback_data='kang'),
@@ -1888,7 +1888,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "owner_info":
+    elif query.data == "donate":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -1899,7 +1899,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text=script.OWNER_INFO,
+            text=script.DONATE,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
