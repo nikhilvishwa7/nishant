@@ -1600,17 +1600,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='source'),
             InlineKeyboardButton('• ʀᴜʟᴇꜱ •', callback_data='rule')
          ], [
-            InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='YTTHUMB'),
+            InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='ytthumb'),
             InlineKeyboardButton('• ʏᴛ-ᴠɪᴅ •', callback_data='video'),
             InlineKeyboardButton('• ʏᴛ-ᴛᴀɢꜱ •', callback_data='yttags')
          ], [
-            InlineKeyboardButton('• ᴏᴡɴᴇʀ •', callback_data='MIKEY'),
-            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='OWNER_INFO'),
-            InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='GITHUB')
+            InlineKeyboardButton('• ᴏᴡɴᴇʀ •', callback_data='mikey'),
+            InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='donate'),
+            InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='github')
          ], [
             InlineKeyboardButton('• ᴋᴀɴɢ •', callback_data='kang'),
             InlineKeyboardButton('• ʀᴇᴘᴏʀᴛ •', callback_data='report'),
-            InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='GEN_PASS')
+            InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
          ], [
             InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='settings'),
             InlineKeyboardButton('• ꜱᴛɪᴄᴋᴇʀ •', callback_data='sticker'), 
