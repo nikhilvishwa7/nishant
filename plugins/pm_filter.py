@@ -1600,6 +1600,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='source'),
             InlineKeyboardButton('• ʀᴜʟᴇꜱ •', callback_data='rule')
          ], [
+            InlineKeyboardButton('🌁 ʏᴛ-ᴛʜᴜᴍʙ', callback_data='ytthumb'),
+            InlineKeyboardButton('📽️ ʏᴛ-ᴠɪᴅ', callback_data='video'),
+            InlineKeyboardButton('🎗️ ʏᴛ-ᴛᴀɢꜱ', callback_data='yttags')
+         ], [
             InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='settings'),
             InlineKeyboardButton('• ꜱᴛɪᴄᴋᴇʀ •', callback_data='sticker'), 
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start')
