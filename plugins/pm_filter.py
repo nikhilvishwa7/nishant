@@ -1971,7 +1971,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "ytthumb":
+    elif query.data == "ytthumb":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -1986,7 +1986,7 @@ elif query.data == "ytthumb":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "video":
+    elif query.data == "video":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2001,7 +2001,7 @@ elif query.data == "video":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "yttags":
+    elif query.data == "yttags":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2016,7 +2016,7 @@ elif query.data == "yttags":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "mikey":
+    elif query.data == "mikey":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2031,7 +2031,7 @@ elif query.data == "mikey":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "owner_info":
+    elif query.data == "owner_info":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2046,7 +2046,7 @@ elif query.data == "owner_info":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "github":
+    elif query.data == "github":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2061,7 +2061,7 @@ elif query.data == "github":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "report":
+    elif query.data == "report":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
@@ -2076,7 +2076,7 @@ elif query.data == "report":
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-elif query.data == "gen_pass":
+    elif query.data == "gen_pass":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
                   ]]
