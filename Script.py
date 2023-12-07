@@ -462,6 +462,12 @@ NOTE:
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    KANG = """
+𝐂𝐫𝐞𝐚𝐭𝐞 𝐎𝐰𝐧 𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐀𝐧𝐝 𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐏𝐚𝐜𝐤
+𝐒𝐞𝐧𝐝 𝐓𝐨 𝐈𝐦𝐚𝐠𝐞
+𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐢𝐦𝐚𝐠𝐞 𝐚𝐧𝐝 𝐬𝐞𝐧𝐝 /𝐤𝐚𝐧𝐠 𝐂𝐨𝐦𝐦𝐚𝐧𝐝
+"""
+
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
