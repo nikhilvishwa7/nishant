@@ -2031,7 +2031,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "owner_info":
+    elif query.data == "donate":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -2042,7 +2042,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text=script.OWNER_INFO,
+            text=script.DONATE,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
