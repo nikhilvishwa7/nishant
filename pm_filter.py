@@ -1619,7 +1619,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴅᴏɴᴀᴛɪᴏɴ •', callback_data='owner_info'),
             InlineKeyboardButton('• ɢɪᴛʜᴜʙ •', callback_data='github')
          ], [
-            InlineKeyboardButton('• ᴀɴᴛᴇɪᴋᴜ •', url="https://t.me/AnteikuOfficial/161"),
+            InlineKeyboardButton('• ᴋᴀɴɢ •', callback_data='kang'),
             InlineKeyboardButton('• ʀᴇᴘᴏʀᴛ •', callback_data='report'),
             InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
          ], [
@@ -1915,6 +1915,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.GITHUB,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "kang":
+        buttons = [[
+            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.KANG,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
