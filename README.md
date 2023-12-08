@@ -73,7 +73,7 @@
 ### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
-* Check [info.py](https://github.com/Kushalhk/TG_BOTZ/blob/stream-feature/info.py) for more optional variables
+* Check [info.py](https://github.com/erotixe/AutoFilter/blob/main/info.py) for more optional variables
 
 </details>
 
@@ -84,25 +84,25 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://github.com/PHOENIX-MONARCH/AUTOFILTER">
+<p align="center"><a href="https://github.com/erotixe/AutoFilter">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy On Heroku">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/PHOENIX-MONARCH/AUTOFILTER&branch=main&name=main">
+<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/erotixe/AutoFilter&branch=main&name=main">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 」─
 </h3>
-<p align="center"><a href="https://railway.app/deploy?template=https://github.com/PHOENIX-MONARCH/AUTOFILTER">
+<p align="center"><a href="https://railway.app/deploy?template=https://github.com/erotixe/AutoFilter">
      <img height="45px" src="https://railway.app/button.svg">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴇɴᴅᴇʀ 」─
 </h3>
-<p align="center"><a href="https://render.com/deploy?repo=https://github.com/PHOENIX-MONARCH/AUTOFILTER">
+<p align="center"><a href="https://render.com/deploy?repo=https://github.com/erotixe/AutoFilter">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a></p>
 <h3 align="center">
@@ -110,12 +110,12 @@
 </h3>
 <p>
 <pre>
-git clone https://github.com/PHOENIX-MONARCH/AUTOFILTER
-cd AUTOFILTER
+git clone https://github.com/erotixe/AutoFilter
+cd AutoFilter
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
-python3 -m Adarsh
+python3 bot.py
 </pre>
 </p>
 </details>
@@ -124,7 +124,7 @@ python3 -m Adarsh
 <h3>「 ᴄʀᴇᴅɪᴛs 」
 </h3>
 
-- <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/adarsh-goel/FileStreamBot-pro) </b>
+- <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/) </b>
 - <b>[ᴍɪᴋᴇʏ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://t.me/team_netflix) </b>
  
 <b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://telegram.me/anteikuofficial) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ʟᴜᴄʏ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ ᴜsᴇꜰᴜʟ & ᴩᴏᴡᴇʀꜰᴜʟ 🖤 </b>
