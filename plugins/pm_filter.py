@@ -1626,7 +1626,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-elif query.data == "help1":
+    elif query.data == "help1":
         buttons = [[
             InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='ytthumb'),
             InlineKeyboardButton('• ʏᴛ-ᴠɪᴅ •', callback_data='video'),
