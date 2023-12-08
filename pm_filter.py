@@ -1651,6 +1651,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ʀᴇᴘᴏʀᴛ •', callback_data='report'),
             InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
         ], [
+            InlineKeyboardButton('• ᴏᴘᴇɴᴀɪ •', callback_data='opnai'),
+            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url='https://t.me/seriesflix_original'),
+            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url='https://t.me/movieflix_original')
+        ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2004,6 +2008,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.GEN_PASS,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "opnai":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.OPNAI,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
