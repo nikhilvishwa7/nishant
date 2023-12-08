@@ -1600,6 +1600,34 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='source'),
             InlineKeyboardButton('• ʀᴜʟᴇꜱ •', callback_data='rule')
          ], [
+            InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='settings'),
+            InlineKeyboardButton('• ꜱᴛɪᴄᴋᴇʀ •', callback_data='sticker'), 
+            InlineKeyboardButton('• ɴᴇxᴛ •', callback_data='help1')
+         ], [
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id,
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+elif query.data == "help1":
+        buttons = [[
             InlineKeyboardButton('• ʏᴛ-ᴛʜᴜᴍʙ •', callback_data='ytthumb'),
             InlineKeyboardButton('• ʏᴛ-ᴠɪᴅ •', callback_data='video'),
             InlineKeyboardButton('• ʏᴛ-ᴛᴀɢꜱ •', callback_data='yttags')
@@ -1611,17 +1639,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ᴋᴀɴɢ •', callback_data='kang'),
             InlineKeyboardButton('• ʀᴇᴘᴏʀᴛ •', callback_data='report'),
             InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
-         ], [
-            InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='settings'),
-            InlineKeyboardButton('• ꜱᴛɪᴄᴋᴇʀ •', callback_data='sticker'), 
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start')
+        ], [
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
-        
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
+            query.message.chat.id,
+            query.message.id,
             InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
         )
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
