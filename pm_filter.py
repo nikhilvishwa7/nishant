@@ -2026,6 +2026,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "group_info":
+        buttons = [[
+            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/Team_Netflix/33")
+       ],[
+            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/movie7xchat"),
+            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/team_netflix")
+       ],[
+            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/+fAjYIpR5Ju02M2Q1"),
+            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/+KeFIjHXhzLMyMWZl")
+       ],[
+            InlineKeyboardButton('• ᴋᴏʀᴇᴀɴ ᴅʀᴀᴍᴀs •', url="https://t.me/+EjBZ70D4ha8wNWY9")
+       ],[ 
+            InlineKeyboardButton('⌫ ʙᴀᴄᴋ', callback_data='start')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.GROUP_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "font":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
