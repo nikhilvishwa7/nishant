@@ -1,7 +1,13 @@
-from pyrogram import Client, filters
-from pyrogram.types import ChatPermissions
-from plugins.helper.admin_check import admin_check
-from plugins.helper.extract import extract_time, extract_user                               
+from pyrogram import (
+    Client,
+    filters
+)
+from pyrogram.types import (
+    ChatPermissions
+)
+from plugins.helpers.admin_check import admin_check
+from plugins.helpers.extract_user import extract_user
+from plugins.helpers.string_handling import extract_time
 
 
 @Client.on_message(filters.command("mute"))
@@ -9,7 +15,9 @@ async def mute_user(_, message):
     is_admin = await admin_check(message)
     if not is_admin:
         return
+
     user_id, user_first_name = extract_user(message)
+
     try:
         await message.chat.restrict_member(
             user_id=user_id,
