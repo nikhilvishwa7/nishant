@@ -127,8 +127,7 @@ python3 bot.py
 - <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/) </b>
 - <b>[ᴍɪᴋᴇʏ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://t.me/team_netflix) </b>
 
-<h3>「 ᴄʀᴇᴅɪᴛs 」
-</h3>
+<h3>「 note 」
  - <b>Importing this repo instead of forking is strictly prohibited 🚫 Kindly fork and edit as your wish (Must Give Credits for devs) 🙃</b>
  - <b>If you find any bugs or errors, report it to the developer.</b>
 * [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/veldxd)
