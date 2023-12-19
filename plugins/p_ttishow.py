@@ -38,7 +38,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton('🔸 ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ 🔹', url="https://t.me/Exotixe")
+                    InlineKeyboardButton('• ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ •', url="https://t.me/Exotixe")
                  ],[
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
@@ -61,7 +61,7 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                    InlineKeyboardButton('🔸 ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ 🔹', url="https://t.me/veldxd")
+                    InlineKeyboardButton('• ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ •', url="https://t.me/veldxd")
                  ],[
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
