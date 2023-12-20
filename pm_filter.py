@@ -1652,8 +1652,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ɢᴇɴ-ᴘᴀss •', callback_data='gen_pass')
         ], [
             InlineKeyboardButton('• ᴏᴘᴇɴᴀɪ •', callback_data='opnai'),
-            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url='https://t.me/seriesflix_original'),
-            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url='https://t.me/movieflix_original')
+            InlineKeyboardButton('• sᴀᴀᴠɴ •', callback_data='song'),
+            InlineKeyboardButton('• ᴘᴜʀɢᴇ •', callback_data='purge')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -2023,6 +2023,36 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.OPNAI_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "song":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SONG,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "purge":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.PURGE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
