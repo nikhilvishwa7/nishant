@@ -14,7 +14,9 @@ class script(object):
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ</a>
 ‣ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href="https://www.mongodb.com/">ᴍᴏɴɢᴏ ᴅʙ</a>
 ‣ ʜᴏꜱᴛᴇᴅ ᴏɴ : <a href="https://t.me/teamanteiku">ᴠᴘs</a>
-‣ ʙᴜɪʟᴅ ꜱᴛᴀᴛᴜꜱ : ᴠ.𝟹.𝟶 [ꜱᴛᴀʙʟᴇ]</b>"""
+‣ ʙᴜɪʟᴅ ꜱᴛᴀᴛᴜꜱ : ᴠ3.7.1 [ꜱᴛᴀʙʟᴇ]</b>
+
+‣ ᴀʟʟ ᴄʀᴇᴅɪᴛs​: <a href='https://t.me/team_netflix'>ᴍɪᴋᴇʏ • ᴀsʜ</a></b>"""
                   
     DISCLAIMER_TXT =  """<b>ᴛʜɪꜱ ɪꜱ not ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
 
@@ -54,7 +56,7 @@ Wᴀɴᴛ ᴛᴏ Kɴᴏᴡ Hᴏᴡ? Fᴏʟʟᴏᴡ Tʜᴇsᴇ Sᴛᴇᴘs:-
 
 ➥ ᴛʜɪꜱ ʙᴏᴛ ꜰʀᴇᴇ ꜰᴏʀ ᴀʟʟ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ʙᴏᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs ꜰʀᴇᴇ ᴏꜰ ᴄᴏꜱᴛ.
 
-Any Doubts or Not Connecting? Contact Me @veldxd</b>
+Any Doubts or Not Connecting? Contact Me @sewxiy</b>
 """
     
     KUSHAL_TXT = """ 
