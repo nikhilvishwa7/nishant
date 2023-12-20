@@ -32,7 +32,7 @@ async def openai_answer(client, message):
                         [InlineKeyboardButton(text=f"🦅 ᴅᴇʟᴇᴛᴇ ʟᴏɢ 🦅", callback_data=f'close_data')],
                     ]
                 reply_markup=InlineKeyboardMarkup(btn)
-                header_credit = f"<b>User:-</b> {message.from_user.mention}\n<b>Query:-</b> {users_message}\n\n<b>📄 Answer:-</b> 👇"
+                header_credit = f"<b>‣ ᴜsᴇʀ:-</b> {message.from_user.mention}\n<b>‣ ǫᴜᴇʀʏ:-</b> {users_message}\n<b>‣ᴘᴏᴡᴇʀᴇᴅ ʙʏ :- @team_netflix</b>\n\n<b>‣ ᴀɴsᴡᴇʀ:-</b> 👇"
                 ai_response = response.choices[0].text
                 await client.send_message(AI_LOGS, text=f"⚡️⚡️#AI_Query \n\n• A user named **{message.from_user.mention}** with user id - `{user_id}`. Asked me this query...\n\n**{users_message}**\n\nHere is what i responded:-\n\n`{ai_response}`\n\n\n❚═User ID:- `{user_id}` \n❚═User Name:- `{message.from_user.mention}`" , reply_markup = reply_markup)
                 heh=await message.reply("🔎")
