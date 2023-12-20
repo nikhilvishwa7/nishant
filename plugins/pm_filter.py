@@ -1666,6 +1666,38 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "help2":
+        buttons = [[
+            InlineKeyboardButton('• ᴘɪɴɢ •', callback_data='alive'),
+            InlineKeyboardButton('• ᴄᴀʀʙᴏɴ •', callback_data='carbon'),
+            InlineKeyboardButton('• ʀᴇᴘᴏ •', callback_data='repo')
+         ], [
+            InlineKeyboardButton('• ᴊsᴏɴ •', callback_data='mikey'),
+            InlineKeyboardButton('• ʟʏʀɪᴄs •', callback_data='lyrics'),
+            InlineKeyboardButton('• sʜᴏʀᴛɴᴇʀ •', callback_data='shortner')
+        ], [
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id,
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "kushal":
         buttons = [[
             InlineKeyboardButton('• ᴄʜᴇᴄᴋ ᴘʟᴀɴs •', callback_data='check'), 
