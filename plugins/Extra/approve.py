@@ -18,7 +18,7 @@ async def autoapprove(client, message: ChatJoinRequest):
             
         ]]
         markup = InlineKeyboardMarkup(buttons)
-        caption = f"<b>{message.from_user.mention()},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {message.chat.title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.</b>"
+        caption = f"<b>{message.from_user.mention()},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {message.chat.title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ, ᴘᴏᴡᴇʀᴇᴅ ʙʏ - @team_netflix.</b>"
         await client.send_photo(
             message.from_user.id, 
             photo='https://telegra.ph/file/a706afc296de6da2a40c8.jpg', 
