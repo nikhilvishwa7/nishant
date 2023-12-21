@@ -22,7 +22,7 @@ You can Download Source Code on  Github.com/localhoct 🥰
 **How to use?**
   Just send the file you want to convert 😁
 ''' #this is the message after client send /start to the bot
-CAPTION = 'converted by nasrani_update' # caption of the files
+CAPTION = 'converted by @team_netflix' # caption of the files
 
 bot.set_parse_mode('md')
 @Client.on_message(filters.command("start",'.'))
