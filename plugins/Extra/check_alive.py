@@ -44,9 +44,9 @@ async def restart(client, m: Message):
     await umm.delete()
     await asyncio.sleep(0.2)
     await m.reply_photo(
-        START_IMG,
+        PICS,
         caption=f"""**ʜᴇʏ, ɪ ᴀᴍ 『[𝐋ᴜᴄʏ](f"t.me/Lucy_Filter_bot")』**
-   ━━━━━━━━━━━━━━━━━━━
+    ABOUT_TXT = """
 <b>‣ ᴍʏ ɴᴀᴍᴇ : <a href="https://t.me/{}">ʙᴏᴛ</a>
 ‣ ᴄʀᴇᴀᴛᴏʀ : <a href="https://t.me/xenxv">мɪкєʏ</a>
 ‣ ʟɪʙʀᴀʀʏ : <a href="https://pyrogram.org/">ᴘʏʀᴏɢʀᴀᴍ</a>
