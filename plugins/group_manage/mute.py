@@ -25,7 +25,7 @@ async def mute_user(_, message):
             await message.reply_text(
                 "👍🏻 "
                 f"{user_first_name}"
-                " Lavender's mouth is shut! 🤐"
+                " Lavda's mouth is shut! 🤐"
             )
         else:
             await message.reply_text(
