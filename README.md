@@ -124,7 +124,7 @@ python3 bot.py
 <h3>「 ᴄʀᴇᴅɪᴛs 」
 </h3>
 
-- <b>[ᴀᴅᴀʀsʜ ɢᴏᴇʟ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/) </b>
+- <b>[ᴋᴜsʜᴀʟʜᴋ](https://github.com/)  ➻  [ʙᴀsᴇ ᴄᴏᴅᴇ](https://github.com/Kushalhk/AutoFilter) </b>
 - <b>[ᴍɪᴋᴇʏ](https://github.com/)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://t.me/team_netflix) </b>
 
  
