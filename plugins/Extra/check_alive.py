@@ -56,6 +56,6 @@ async def restart(client, m: Message):
 ‣ ʙᴜɪʟᴅ ꜱᴛᴀᴛᴜꜱ : ᴠ3.7.1 [ꜱᴛᴀʙʟᴇ]</b>
 
 ‣ ᴀʟʟ ᴄʀᴇᴅɪᴛs​: <a href='https://t.me/team_netflix'>ᴍɪᴋᴇʏ</a></b>"""
-   ━━━━━━━━━━━━━━━━━━━""",
+   ━━━━━━━━━━━━━━━━━━━
         reply_markup=InlineKeyboardMarkup(lucy),
     )
