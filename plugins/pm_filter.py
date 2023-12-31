@@ -1775,7 +1775,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/02e7ecc3e2693b481b914.jpg")
+            InputMediaPhoto("https://graph.org/file/a7c47a4be65d240feb22e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN1_TXT,
@@ -1803,7 +1803,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/02e7ecc3e2693b481b914.jpg")
+            InputMediaPhoto("https://graph.org/file/a7c47a4be65d240feb22e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN2_TXT,
@@ -1830,7 +1830,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/02e7ecc3e2693b481b914.jpg")
+            InputMediaPhoto("https://graph.org/file/a7c47a4be65d240feb22e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN3_TXT,
