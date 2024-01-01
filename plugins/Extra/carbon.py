@@ -15,7 +15,7 @@ import aiofiles
 import speedtest
 from PIL import Image
 from pyrogram.types import Message
-from info import GRP_LNK
+from info import S_GROUP
 
 aiohttpsession = ClientSession()
 
@@ -27,22 +27,24 @@ async def make_carbon(code):
     return image
 
 
-@Client.on_message(filters.command("carbon"))
+@bot.on_message(filters.command("carbon"))
 async def carbon_func(_, message):
     if not message.reply_to_message:
-        return await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.")        
+        return await message.reply_text(
+            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ."
+        )
     if not message.reply_to_message.text:
-        return await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.")       
+        return await message.reply_text(
+            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ."
+        )
     user_id = message.from_user.id
-    code = message.reply_to_message.text
     m = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ...")
-    url = "https://carbonara.vercel.app/api/cook"
-    async with aiohttpsession.post(url, json={"code": code}) as resp:
-        image = BytesIO(await resp.read())
-    image.name = "carbon.png"   
+    carbon = await make_carbon(message.reply_to_message.text)
     await m.edit("ᴜᴘʟᴏᴀᴅɪɴɢ..")
-    await message.reply_photo(photo=image, caption="**ᴛʜɪs ᴘɪᴄ ɪs ɴɪᴄᴇ ᴏɴᴇ\nʙʏ @Team_Netflix***",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/veldxd")]])                 
+    await message.reply_photo(
+        photo=carbon,
+        caption="**ᴛʜɪs ᴘɪᴄ ɪs ɴɪᴄᴇ ᴏɴᴇ\nʙʏ @BotszList**",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=S_GROUP)]]),                   
     )
     await m.delete()
     carbon.close()
