@@ -1,4 +1,4 @@
-# Kanged From @TroJanZheX
+# Kanged From @team_netflix
 import asyncio
 import re
 import ast
@@ -1531,7 +1531,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
-                    InlineKeyboardButton('• ɢᴇᴛ ᴀᴅs ғʀᴇᴇ ғɪʟᴇs •', callback_data="kushal")
+                    InlineKeyboardButton('• ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
