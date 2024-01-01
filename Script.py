@@ -309,12 +309,12 @@ sᴇʀɪᴇs ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ
     CAPTION = """ 
 <b>• {file_name}
 ╭──────────────────╮
-• <a href="https://t.me/team_netflix">ᴛᴇᴧᴍ ɴᴇᴛғʟɪх</a>
+• <a href="https://t.me/kdrama_complex">ᴋᴅʀᴀᴍᴀ ᴄᴏᴍᴘʟᴇx</a>
 • <a href="https://t.me/+fAjYIpR5Ju02M2Q1">sᴇʀɪᴇs ғʟɪx</a>
 • <a href="https://t.me/+KeFIjHXhzLMyMWZl">ᴍᴏᴠɪᴇ ғʟɪx</a>
 ╰──────────────────╯
 
-• ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/AnteikuOfficial/161">ᴀɴᴛᴇɪᴋᴜ</a></b>"""
+• ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/team_netflix/161">ᴛᴇᴀᴍ ɴᴇᴛғʟɪx</a></b>"""
     
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
