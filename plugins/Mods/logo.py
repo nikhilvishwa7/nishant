@@ -2,7 +2,7 @@ from pyrogram import Client, filters, idle
 import pyrogram, asyncio, random, time
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
-from variables import PICS, ADMIN
+from info import PICS, ADMINS
 from utils.logo_maker import generate_logo
 
 
