@@ -146,40 +146,35 @@ async def get_poster(query, bulk=False, id=False, file=None):
     }
 # https://github.com/odysseusmax/animated-lamp/blob/2ef4730eb2b5f0596ed6d03e7b05243d93e3415b/bot/utils/broadcast.py#L37
 
-async def broadcast_messages(user_id, message):
+async def broadcast_messages(user_id, message, pin):
     try:
-        await message.copy(chat_id=user_id)
-        return True, "Success"
+        m = await message.copy(chat_id=user_id)
+        if pin:
+            await m.pin(both_sides=True)
+        return "Success"
     except FloodWait as e:
-        await asyncio.sleep(e.x)
+        await asyncio.sleep(e.value)
         return await broadcast_messages(user_id, message)
-    except InputUserDeactivated:
-        await db.delete_user(int(user_id))
-        logging.info(f"{user_id}-Removed from Database, since deleted account.")
-        return False, "Deleted"
-    except UserIsBlocked:
-        logging.info(f"{user_id} -Blocked the bot.")
-        return False, "Blocked"
-    except PeerIdInvalid:
-        await db.delete_user(int(user_id))
-        logging.info(f"{user_id} - PeerIdInvalid")
-        return False, "Error"
     except Exception as e:
-        return False, "Error"
+        await db.delete_user(int(user_id))
+        return "Error"
 
-async def broadcast_messages_group(chat_id, message):
+async def groups_broadcast_messages(chat_id, message, pin):
     try:
-        kd = await message.copy(chat_id=chat_id)
-        try:
-            await kd.pin()
-        except:
-            pass
-        return True, "Success"
+        k = await message.copy(chat_id=chat_id)
+        if pin:
+            try:
+                await k.pin()
+            except:
+                pass
+        return "Success"
     except FloodWait as e:
-        await asyncio.sleep(e.x)
-        return await broadcast_messages_group(chat_id, message)
+        await asyncio.sleep(e.value)
+        return await groups_broadcast_messages(chat_id, message)
     except Exception as e:
-        return False, "Error"
+        await db.delete_chat(chat_id)
+        return "Error"
+
     
 async def search_gagala(text):
     usr_agent = {
