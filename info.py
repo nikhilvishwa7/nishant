@@ -62,8 +62,8 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shrinkforearn.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'f598eb0858fc5fb48dc1cb2681e50e8cf08f11fa')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'gplinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'cd767b86e8d9f1fbe1be1d55c2d0772f5fbee8c4')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'publicearn.com')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '12acd92137fc0825775940b8ad5375a5ce63d71f')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
