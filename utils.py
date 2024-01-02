@@ -52,6 +52,11 @@ class temp(object):
     GETALL = {}
     SHORT = {}
     SETTINGS = {}
+    VERIFICATIONS = {}
+    FILES = {}
+    USERS_CANCEL = False
+    GROUPS_CANCEL = False
+    BOT = None
 
 async def is_subscribed(bot, query):
     try:
@@ -146,40 +151,51 @@ async def get_poster(query, bulk=False, id=False, file=None):
     }
 # https://github.com/odysseusmax/animated-lamp/blob/2ef4730eb2b5f0596ed6d03e7b05243d93e3415b/bot/utils/broadcast.py#L37
 
-async def broadcast_messages(user_id, message):
-    try:
-        await message.copy(chat_id=user_id)
-        return True, "Success"
-    except FloodWait as e:
-        await asyncio.sleep(e.x)
-        return await broadcast_messages(user_id, message)
-    except InputUserDeactivated:
-        await db.delete_user(int(user_id))
-        logging.info(f"{user_id}-Removed from Database, since deleted account.")
-        return False, "Deleted"
-    except UserIsBlocked:
-        logging.info(f"{user_id} -Blocked the bot.")
-        return False, "Blocked"
-    except PeerIdInvalid:
-        await db.delete_user(int(user_id))
-        logging.info(f"{user_id} - PeerIdInvalid")
-        return False, "Error"
-    except Exception as e:
-        return False, "Error"
+async def get_verify_status(user_id):
+    verify = temp.VERIFICATIONS.get(user_id)
+    if not verify:
+        verify = await db.get_verify_status(user_id)
+        temp.VERIFICATIONS[user_id] = verify
+    return verify
 
-async def broadcast_messages_group(chat_id, message):
+async def update_verify_status(user_id, verify_token="", is_verified=False, verified_time=0, link=""):
+    current = await get_verify_status(user_id)
+    current['verify_token'] = verify_token
+    current['is_verified'] = is_verified
+    current['verified_time'] = verified_time
+    current['link'] = link
+    temp.VERIFICATIONS[user_id] = current
+    await db.update_verify_status(user_id, current)
+    
+    
+async def broadcast_messages(user_id, message, pin):
     try:
-        kd = await message.copy(chat_id=chat_id)
-        try:
-            await kd.pin()
-        except:
-            pass
-        return True, "Success"
+        m = await message.copy(chat_id=user_id)
+        if pin:
+            await m.pin(both_sides=True)
+        return "Success"
     except FloodWait as e:
-        await asyncio.sleep(e.x)
-        return await broadcast_messages_group(chat_id, message)
+        await asyncio.sleep(e.value)
+        return await broadcast_messages(user_id, message)
     except Exception as e:
-        return False, "Error"
+        await db.delete_user(int(user_id))
+        return "Error"
+
+async def groups_broadcast_messages(chat_id, message, pin):
+    try:
+        k = await message.copy(chat_id=chat_id)
+        if pin:
+            try:
+                await k.pin()
+            except:
+                pass
+        return "Success"
+    except FloodWait as e:
+        await asyncio.sleep(e.value)
+        return await groups_broadcast_messages(chat_id, message)
+    except Exception as e:
+        await db.delete_chat(chat_id)
+        return "Error"
     
 async def search_gagala(text):
     usr_agent = {
@@ -280,6 +296,27 @@ def list_to_str(k):
         return ' '.join(f'{elem}, ' for elem in k)
     else:
         return ' '.join(f'{elem}, ' for elem in k)
+
+def get_readable_time(seconds):
+    periods = [('d', 86400), ('h', 3600), ('m', 60), ('s', 1)]
+    result = ''
+    for period_name, period_seconds in periods:
+        if seconds >= period_seconds:
+            period_value, seconds = divmod(seconds, period_seconds)
+            result += f'{int(period_value)}{period_name}'
+    return result
+
+def get_wish():
+    tz = pytz.timezone('Asia/Colombo')
+    time = datetime.now(tz)
+    now = time.strftime("%H")
+    if now < "12":
+        status = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌞"
+    elif now < "18":
+        status = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗"
+    else:
+        status = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
+    return status
 
 def last_online(from_user):
     time = ""
