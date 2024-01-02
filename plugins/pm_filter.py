@@ -1531,7 +1531,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
-                    InlineKeyboardButton('• ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
+                    InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1613,13 +1613,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="● ◌ ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="● ● ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="● ● ●"
         )
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -1654,13 +1654,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="● ◌ ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="● ● ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="● ● ●"
         )
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -1686,13 +1686,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="● ◌ ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="● ● ◌"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="● ● ●"
         )
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -2748,7 +2748,7 @@ async def auto_filter(client, msg, spoll=False):
             try:
                if settings['auto_delete']:
                     await asyncio.sleep(300)
-                    m=await message.reply_text("🔎")
+                    m=await message.reply_text("ᴡᴀɪᴛ ʙʀᴏ...🔎")
                     await hmm.delete()
                     await message.delete()
             except KeyError:
@@ -2758,7 +2758,7 @@ async def auto_filter(client, msg, spoll=False):
                 await message.delete()
         except Exception as e:
             logger.exception(e)
-            m=await message.reply_text("🔎") 
+            m=await message.reply_text("ᴡᴀɪᴛ ʙʀᴏ...🔎") 
             fek = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
             await m.delete()
             try:
