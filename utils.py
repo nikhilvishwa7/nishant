@@ -151,23 +151,6 @@ async def get_poster(query, bulk=False, id=False, file=None):
     }
 # https://github.com/odysseusmax/animated-lamp/blob/2ef4730eb2b5f0596ed6d03e7b05243d93e3415b/bot/utils/broadcast.py#L37
 
-async def get_verify_status(user_id):
-    verify = temp.VERIFICATIONS.get(user_id)
-    if not verify:
-        verify = await db.get_verify_status(user_id)
-        temp.VERIFICATIONS[user_id] = verify
-    return verify
-
-async def update_verify_status(user_id, verify_token="", is_verified=False, verified_time=0, link=""):
-    current = await get_verify_status(user_id)
-    current['verify_token'] = verify_token
-    current['is_verified'] = is_verified
-    current['verified_time'] = verified_time
-    current['link'] = link
-    temp.VERIFICATIONS[user_id] = current
-    await db.update_verify_status(user_id, current)
-    
-    
 async def broadcast_messages(user_id, message, pin):
     try:
         m = await message.copy(chat_id=user_id)
