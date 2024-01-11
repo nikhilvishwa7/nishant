@@ -1,6 +1,6 @@
 from threading import RLock
 
-from plugins.group_manage.database import MongoDB
+from plugins.group_manage.databse import MongoDB
 import logging
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.INFO)
