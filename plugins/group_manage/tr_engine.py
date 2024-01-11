@@ -9,7 +9,7 @@ from pyrogram.types import CallbackQuery
 from yaml import FullLoader
 from yaml import load as load_yml
 
-from millie.group_manage.database.lang_db import Langs
+from plugins.group_manage.database.lang_db import Langs
 import logging
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.INFO)
@@ -22,7 +22,7 @@ def cache_localizations(files):
     """Get all translated strings from files."""
     ldict = {lang: {} for lang in ENABLED_LOCALES}
     for file in files:
-        lang_name = (file.split(path.sep)[1]).replace(".yml", "")
+        lang_name = (file.split(path.sep)[1]).replace(".yaml", "")
         lang_data = load_yml(open(file, encoding="utf-8"), Loader=FullLoader)
         ldict[lang_name] = lang_data
     return ldict
