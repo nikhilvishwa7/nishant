@@ -3,8 +3,6 @@ from os import environ
 from Script import script
 import asyncio
 from logging import WARNING, getLogger
-from collections import defaultdict
-from typing import Dict, List, Union
 from pyrogram import Client
 from time import time
 import logging 
