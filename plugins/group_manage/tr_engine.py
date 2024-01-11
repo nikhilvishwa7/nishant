@@ -6,8 +6,8 @@ from threading import RLock
 from traceback import format_exc
 
 from pyrogram.types import CallbackQuery
-from yml import FullLoader
-from yml import load as load_yml
+from yaml import FullLoader
+from yaml import load as load_yml
 
 from plugins.group_manage.databse.lang_db import Langs
 import logging
