@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
-from millie.helper.admin_check import admin_check
-from millie.helper.extract import extract_time, extract_user                               
+from plugins.helper.admin_check import admin_check
+from plugins.helper.extract import extract_time, extract_user                               
 from utils import temp 
 from info import LOG_CHANNEL
 
