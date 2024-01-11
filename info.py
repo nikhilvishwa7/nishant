@@ -63,6 +63,8 @@ DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
+DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
+
 #Openai
 AI = is_enabled((environ.get("AI","True")), True)
 OPENAI_API = environ.get("OPENAI_API"," ")
