@@ -1,6 +1,19 @@
 import re
 from os import environ
-from Script import script 
+from Script import script
+import asyncio
+from logging import WARNING, getLogger
+from collections import defaultdict
+from typing import Dict, List, Union
+from pyrogram import Client
+from time import time
+import logging 
+
+LOGGER = logging.getLogger(__name__)
+
+LOGGER.setLevel(logging.INFO)
+getLogger("pyrogram").setLevel(WARNING)
+LOGGER = getLogger(__name__)
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
