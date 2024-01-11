@@ -1,11 +1,12 @@
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
-from plugins.helper.admin_check import admin_check
-from plugins.helper.extract import extract_time, extract_user                               
-
+from millie.helper.admin_check import admin_check
+from millie.helper.extract import extract_time, extract_user                               
+from utils import temp 
+from info import LOG_CHANNEL
 
 @Client.on_message(filters.command("mute"))
-async def mute_user(_, message):
+async def mute_user(bot, message):
     is_admin = await admin_check(message)
     if not is_admin:
         return
@@ -25,20 +26,23 @@ async def mute_user(_, message):
             await message.reply_text(
                 "👍🏻 "
                 f"{user_first_name}"
-                " Lavda's mouth is shut! 🤐"
+                " Lavender's mouth is shut! 🤐"
             )
+            await bot.send_message(LOG_CHANNEL, text=f"**MUTE**\n\n**USER**: <a href='tg://user?id={user_id}'>{user_first_name}</a> \n\n**USER ID**:`{user_id}`\n\n**PERMISSIONS: MUTED**\n\nin **CHAT NAME**: {message.chat.title}\n**CHAT ID** `{message.chat.id}`\n\n\n**POWERD BY:** {temp.B_LINK}")
         else:
             await message.reply_text(
                 "👍🏻 "
                 f"<a href='tg://user?id={user_id}'>"
-                "Of lavender"
+                f"{user_first_name}"
                 "</a>"
                 " The mouth is closed! 🤐"
             )
+            await bot.send_message(LOG_CHANNEL, text=f"**MUTE**\n\n**USER**: <a href='tg://user?id={user_id}'>{user_first_name}</a>\n\n**USER ID**:`{user_id}`\n\n**PERMISSIONS: MUTED**\n\nin **CHAT NAME**: {message.chat.title}\n**CHAT ID** `{message.chat.id}`\n\n\n**POWERD BY:** {temp.B_LINK}")
+        
 
 
 @Client.on_message(filters.command("tmute"))
-async def temp_mute_user(_, message):
+async def temp_mute_user(bot, message):
     is_admin = await admin_check(message)
     if not is_admin:
         return
@@ -78,12 +82,15 @@ async def temp_mute_user(_, message):
                 f"{user_first_name}"
                 f" muted for {message.command[1]}!"
             )
+            await bot.send_message(LOG_CHANNEL, text=f"**MUTE**\n\n**USER**: <a href='tg://user?id={user_id}'>{user_first_name}</a>\n\n**USER ID**:`{user_id}`\n\n**PERMISSIONS: MUTED**\n\nin **CHAT NAME**: {message.chat.title}\n**CHAT ID** `{message.chat.id}`\n\n\n**POWERD BY:** {temp.B_LINK}")
         else:
             await message.reply_text(
                 "Be quiet for a while! 😠"
                 f"<a href='tg://user?id={user_id}'>"
-                "Of lavender"
+                f"{user_first_name}"
                 "</a>"
                 " Mouth "
                 f" muted for {message.command[1]}!"
             )
+            await bot.send_message(LOG_CHANNEL, text=f"**MUTE**\n\n**USER**: <a href='tg://user?id={user_id}'>{user_first_name}</a>\n\n**USER ID**:`{user_id}`\n\n**PERMISSIONS: MUTED**\n\nin **CHAT NAME**: {message.chat.title}\n**CHAT ID** `{message.chat.id}`\n\n\n**POWERD BY:** {temp.B_LINK}")
+        
