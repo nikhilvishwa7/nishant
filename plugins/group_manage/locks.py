@@ -1,4 +1,4 @@
-rom pyrogram import Client, filters
+from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, ChatNotModified, RPCError
 from pyrogram.types import ChatPermissions, Message
 from plugins.helper.admin_check import admin_fliter
