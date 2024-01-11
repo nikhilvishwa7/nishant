@@ -3,8 +3,6 @@ from pyrogram.errors import ChatAdminRequired, ChatNotModified, RPCError
 from pyrogram.types import ChatPermissions, Message
 from plugins.helper.admin_check import admin_fliter
 from plugins.group_manage.databse.approve_db import Approve
-from plugins.group_manage.tr_engine import tlang
-from plugins.group_manage.utils.custom_filters import command, restrict_filter
 from info import LOG_CHANNEL
 from utils import temp
 import logging
