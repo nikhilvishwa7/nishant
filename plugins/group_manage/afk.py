@@ -4,7 +4,7 @@ import time
 from pyrogram import filters
 from pyrogram.types import Message
 from info import app
-from plugins.group_manage.database.afkdb import is_afk, add_afk, remove_afk, get_afk_users
+from plugins.group_manage.databse.afkdb import is_afk, add_afk, remove_afk, get_afk_users
 from utils import temp
 
 afkcheacker = 1
