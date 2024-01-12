@@ -60,7 +60,7 @@ async def start(client, message):
         m=await message.reply_text("👀")
         await asyncio.sleep(1)
         await m.delete()
-        m=await message.reply_text("⚡")
+        m=await message.reply_text("✨")
         await asyncio.sleep(1)
         await m.delete()
         m=await message.reply_sticker("CAACAgUAAxkBAAELSp5lVLHV57hUEVY4RmkKkppUMGKwQwACswoAAv8jOVV3gG7LZRPXODME") 
