@@ -309,7 +309,7 @@ sᴇʀɪᴇs ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ
     CAPTION = """ 
 <b>• {file_name}
 ╭──────────────────╮
-• <a href="https://t.me/kdrama_complex">ᴋᴅʀᴀᴍᴀ ᴄᴏᴍᴘʟᴇx</a>
+• <a href="https://t.me/anime_cruise_netflix">ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ</a>
 • <a href="https://t.me/+fAjYIpR5Ju02M2Q1">sᴇʀɪᴇs ғʟɪx</a>
 • <a href="https://t.me/+KeFIjHXhzLMyMWZl">ᴍᴏᴠɪᴇ ғʟɪx</a>
 ╰──────────────────╯
