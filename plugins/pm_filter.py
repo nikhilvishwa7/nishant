@@ -1727,7 +1727,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('sʜᴏʀᴛɴᴇʀ', callback_data='shortner')
          ], [
             InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='json'),
-            InlineKeyboardButton('', callback_data='torrent'),
+            InlineKeyboardButton('ᴍᴜᴛᴇ', callback_data='restrict'),
             InlineKeyboardButton('', callback_data='shortner')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1'),
