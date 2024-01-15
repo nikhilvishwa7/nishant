@@ -1,4 +1,4 @@
-mport os
+import os
 import aiohttp
 import json
 from pyrogram import Client, filters, enums, emoji
