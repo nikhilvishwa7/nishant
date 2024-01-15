@@ -1829,7 +1829,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "extra_mod":
         buttons = [[
-            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='modules2')
+            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='special')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
