@@ -646,6 +646,10 @@ Cᴏᴍᴍᴀɴᴅꜱ ᴀɴᴅ Uꜱᴀɢᴇ:
 𝐂𝐨𝐮𝐬𝐭𝐨𝐦 𝐌𝐨𝐝
 """
 
+    USER_DETAILS = "<b>PM FROM:</b>\nName: {} {}\nId: {}\nUname: @{}\nScam: {}\nRestricted: {}\nStatus: {}\nDc Id: {}"
+    PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
+    PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
+
 
 
     SPECIAL_MOD2 = """
