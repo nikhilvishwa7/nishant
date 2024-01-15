@@ -1734,6 +1734,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴘᴀɢᴇ 1/2', callback_data='page'),
             InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ', callback_data='special')
         ]]
+
          reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
             query.message.chat.id, 
