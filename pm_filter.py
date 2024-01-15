@@ -1739,7 +1739,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
          ], [
             InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='json'),
             InlineKeyboardButton('ᴍᴜᴛᴇ', callback_data='restrict'),
-            InlineKeyboardButton('', callback_data='kick')
+            InlineKeyboardButton('ᴋɪᴄᴋ', callback_data='kick')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1'),
             InlineKeyboardButton('ᴘᴀɢᴇ 1/2', callback_data='page'),
@@ -1869,39 +1869,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 
-
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "help2":
-        buttons = [[
-            InlineKeyboardButton('• ᴘɪɴɢ •', callback_data='alive'),
-            InlineKeyboardButton('• ᴄᴀʀʙᴏɴ •', callback_data='carbon'),
-            InlineKeyboardButton('• ʀᴇᴘᴏ •', callback_data='repo')
-         ], [
-            InlineKeyboardButton('• ᴊsᴏɴ •', callback_data='json'),
-            InlineKeyboardButton('• ʟʏʀɪᴄs •', callback_data='lyrics'),
-            InlineKeyboardButton('• sʜᴏʀᴛɴᴇʀ •', callback_data='shortner')
-        ], [
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help1')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id,
-            query.message.id,
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
@@ -2376,6 +2343,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "torrent":
+        buttons = [[
+            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help2')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.TORRENT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "restrict":
         buttons = [[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help2')
@@ -2400,7 +2392,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.RESTRIC_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )*
+        )
     elif query.data == "kick":
         buttons = [[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help2')
