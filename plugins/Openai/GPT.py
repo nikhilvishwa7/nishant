@@ -1,28 +1,44 @@
-from info import SUPPORT_CHAT, OPENAI_API
+from utils import temp
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client, filters, enums
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from info import *
 import openai
-
+import asyncio
 openai.api_key = OPENAI_API
 
-@Client.on_message(filters.command("openai"))
-async def openai(client, message):
-    if message.chat.id != SUPPORT_CHAT:
-        btn = [[
-            InlineKeyboardButton('Support Group', url="https://telegram.me/weebs_support")
-        ]]
-        return await message.reply("This command only working in support group.", reply_markup=InlineKeyboardMarkup(btn))
-    try:
-        text = message.text.split(" ", 1)[1]
-    except:
-        return await message.reply_text("Command Incomplete!\nUsage: /openai your_question")
-    msg = await message.reply("Searching...")
-    try:
-        response = openai.Completion.create(
-            engine="text-davinci-003",
-            prompt=text,
-            max_tokens=2000
-        )
-        await msg.edit(f"User: {message.from_user.mention}\nQuery: <code>{text}</code>\n\nResults:\n\n<code>{response.choices[0].text}</code>")
-    except Exception as e:
-        await msg.edit(f'Error - <code>{e}</code>')
+
+@Client.on_message(filters.private & filters.command('openai'))
+async def openai_answer(client, message):
+    if AI == True:
+        user_id = message.from_user.id
+        if user_id:
+            try:
+                users_message = message.text.split(" ", 1)[1]
+            except:
+                return await message.reply_text("use in this format-\n\n<code>/openai how to create a telegram bot</code> <br> Sorry openai quota completed")
+            try:
+                user_id = message.from_user.id
+                response = openai.Completion.create(
+                    model = "text-davinci-003",
+                    prompt = users_message,
+                    temperature = 0.5,
+                    max_tokens = 1000,
+                    top_p=1,
+                    frequency_penalty=0.1,
+                    presence_penalty = 0.0,
+                )
+                btn=[
+                        [InlineKeyboardButton(text=f"👀 ᴛᴀᴋᴇ ᴀᴄᴛɪᴏɴ 👀", url=f'https://t.me/{temp.U_NAME}')],
+                        [InlineKeyboardButton(text=f"🦅 ᴅᴇʟᴇᴛᴇ ʟᴏɢ 🦅", callback_data=f'close_data')],
+                    ]
+                reply_markup=InlineKeyboardMarkup(btn)
+                header_credit = f"<b>‣ ᴜsᴇʀ:-</b> {message.from_user.mention}\n<b>‣ ǫᴜᴇʀʏ:-</b> {users_message}\n<b>‣ᴘᴏᴡᴇʀᴇᴅ ʙʏ :- @team_netflix</b>\n\n<b>‣ ᴀɴsᴡᴇʀ:-</b> 👇"
+                ai_response = response.choices[0].text
+                await client.send_message(AI_LOGS, text=f"⚡️⚡️#AI_Query \n\n• A user named **{message.from_user.mention}** with user id - `{user_id}`. Asked me this query...\n\n**{users_message}**\n\nHere is what i responded:-\n\n`{ai_response}`\n\n\n❚═User ID:- `{user_id}` \n❚═User Name:- `{message.from_user.mention}`" , reply_markup = reply_markup)
+                heh=await message.reply("🔎")
+                await asyncio.sleep(2)
+                await heh.edit(f"{header_credit}\n\n<code>{ai_response}</code>")
+            except Exception as error:
+                print(error)
+    else:
+        return
