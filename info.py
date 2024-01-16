@@ -26,6 +26,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '23890262'))
 API_HASH = environ.get('API_HASH', 'da7e86cf57b0e6220b8a9e0aed228a68')
+OWNER_ID = environ.get('OWNER_ID', '6497757690')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
@@ -88,6 +89,7 @@ MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 BOT_USERNAME = environ.get("BOT_USERNAME", "Lucy_Filter_bot")
+BOT_NAME = environ.get("BOT_NAME", "𝐋ᴜᴄʏ")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movie7xchat')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/team_netflix')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_Download_7x/26')
