@@ -67,3 +67,4 @@ telebot==0.0.5
 uvloop
 lexica-api
 httpx[http2]
+bardapi
