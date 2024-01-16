@@ -21,8 +21,6 @@ import pytz
 from aiohttp import web
 from plugins import web_server
 from lexica import Client as ApiClient
-from plugins.helper.infos import Config
-from plugins.helper.config.telegraph import GraphClient
 
 class Bot(Client):
 
