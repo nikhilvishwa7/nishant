@@ -12,6 +12,11 @@ from bardapi import Bard
 from datetime import datetime
 import logging
 
+FORMAT = "[LEGEND-MUKESH] %(message)s"
+logging.basicConfig(
+    level=logging.WARNING, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
 
 @Client.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
