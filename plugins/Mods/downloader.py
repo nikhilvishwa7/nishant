@@ -2,7 +2,7 @@
 
 from pyrogram import Client, filters, types as t
 from infos import Config
-from Utils import identifyPlatform,DownloadMedia,getContentType
+from plugins.helper.config import identifyPlatform,DownloadMedia,getContentType
 
 
 @Client.on_message(filters.regex(pattern=Config.mediaPattern))
