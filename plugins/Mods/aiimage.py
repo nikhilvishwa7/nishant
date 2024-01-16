@@ -26,7 +26,8 @@ from pyrogram import filters
 from pyrogram.types import  Message
 from pyrogram.enums import ChatAction
 from pyrogram.types import InputMediaPhoto
-from pyrogram import Client,filters, enums
+from pyrogram import Client, filters, enums
+from info import BOT_USERNAME
 import requests
 
 @Client.on_message(filters.command("imagine"))
