@@ -9,9 +9,9 @@ from info import BOT_NAME, BOT_USERNAME, OWNER_ID, SP, Client
 
 
 @Client.on_message(filters.command(["botrepo", "source"]))
-async def repo(_, message: Message):
+async def botrepo(_, message: Message):
     await message.reply_photo(
-        photo=SP,
+        photo=SRC_IMG,
         caption=f"""**ʜᴇʏ {message.from_user.mention},
 
 ɪ ᴀᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
