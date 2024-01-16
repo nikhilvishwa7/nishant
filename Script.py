@@ -222,15 +222,11 @@ Hᴇʟᴘ : <b>Sᴇᴛᴛɪɴɢꜱ</b>
 
 </b>"""
  
-    STATUS_TXT = """<b>⍟─────[ <b>Bᴏᴛ Sᴛᴀᴛᴜs</b> ]─────⍟
-    
-★ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{}</code>
-★ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ : <code>{}</code>
-★ ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘꜱ : <code>{}</code>
-★ ᴜꜱᴇᴅ ꜱᴛᴏʀᴀɢᴇ: <code>{}</code>
-★ ꜰʀᴇᴇ ꜱᴛᴏʀᴀɢᴇ : <code>{}</code>
-
-•❅──────✧❅✦❅✧──────❅•</b>"""
+    STATUS_TXT = """<b>‣ ᴛᴏᴛᴀʟ ꜰɪʟᴇs: <code>{}</code>
+‣ ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{}</code>
+‣ ᴛᴏᴛᴀʟ ᴄʜᴀᴛs: <code>{}</code>
+‣ ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ: <code>{}</code>
+‣ ꜰʀᴇᴇ sᴛᴏʀᴀɢᴇ: <code>{}</code></b>"""
 
 
     LOG_TEXT_G = """<b>#NewGroup
@@ -323,7 +319,7 @@ IMDb Data:
 ‣ ᴛɪᴛʟᴇ : <a href={url}>{title}</a>
 ‣ ɢᴇɴʀᴇs : {genres}
 ‣ ʏᴇᴀʀ : <a href={url}/releaseinfo>{year}</a>
-‣ ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10 (Based on {votes} user ratings)</b>
+‣ ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10 (Based on {votes} user ratings)
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <code>{languages}</code></a>
 ‣ ʀᴜɴᴛɪᴍᴇ : {runtime} Minutes</a>
 
