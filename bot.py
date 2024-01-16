@@ -20,6 +20,9 @@ from datetime import date, datetime
 import pytz
 from aiohttp import web
 from plugins import web_server
+from lexica import Client as ApiClient
+from infos import Config
+from config.telegraph import GraphClient
 
 class Bot(Client):
 
