@@ -26,10 +26,10 @@ from pyrogram import filters
 from pyrogram.types import  Message
 from pyrogram.enums import ChatAction
 from pyrogram.types import InputMediaPhoto
-from .. import pbot as  Mukesh,BOT_USERNAME
+from .. import pbot as  Client,BOT_USERNAME
 import requests
 
-@Mukesh.on_message(filters.command("imagine"))
+@Client.on_message(filters.command("imagine"))
 async def imagine_(b, message: Message):
     if message.reply_to_message:
         text = message.reply_to_message.text
