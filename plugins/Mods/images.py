@@ -1,7 +1,7 @@
 # Copyright 2023 Qewertyy, MIT License
 
 from pyrogram import Client, filters, types as t,errors
-from config import getText,SearchImages,getImageContent
+from plugins.helper.config import getText,SearchImages,getImageContent
 import traceback,random,datetime,os,io
 
 @Client.on_message(filters.command(["img","image","imagesearch"]))
