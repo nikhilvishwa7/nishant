@@ -1,3 +1,8 @@
+from pyrogram import filters
+from pyrogram.types import  Message
+from pyrogram.enums import ChatAction
+from pyrogram import Client
+import requests
 import google.generativeai as palm
 import telebot
 
