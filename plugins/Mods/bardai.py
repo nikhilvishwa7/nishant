@@ -13,7 +13,7 @@ from datetime import datetime
 import logging
 
 
-'''bard = Bard(token=BARD_TOKEN)   
+bard = Bard(token=BARD_TOKEN)   
 @Client.on_message(filters.command("bard"))
 async def bard_bot(bot, message):
     try:
