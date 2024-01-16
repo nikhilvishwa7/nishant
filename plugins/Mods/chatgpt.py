@@ -8,7 +8,6 @@ from config import *
 import os,sys,re,requests
 import asyncio,time
 from random import choice
-from bardapi import Bard
 from datetime import datetime
 import logging
 
