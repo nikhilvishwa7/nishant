@@ -1,7 +1,7 @@
 # Copyright 2023 Qewertyy, MIT License
 import traceback
 from pyrogram import Client, filters, types as t
-from config import ReverseImageSearch,getFile,uploadToTelegraph
+from plugins.helper.config import ReverseImageSearch,getFile,uploadToTelegraph
 from bot import TelegraphClient
 
 @Client.on_message(filters.command(["pp","reverse","sauce"]))
