@@ -2618,7 +2618,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "management":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main_help'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main'),
             InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2644,7 +2644,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "basic_help":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main_help'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main'),
             InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2670,7 +2670,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "expert_help":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main_help'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='main'),
             InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
