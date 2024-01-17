@@ -1,4 +1,4 @@
-# By @TroJanzHEX
+# By @veldxd
 # Improved by TeamDaisyX
 
 from pyrogram import filters
@@ -9,8 +9,8 @@ from pyrogram.types import (
     Message,
 )
 
-# By @TroJanzHEX
-from Shikimori.Extras.ImageEditor.edit_1 import (  # pylint:disable=import-error
+# By @veldxd
+from image.edit_1.py import import (  # pylint:disable=import-error
     black_white,
     box_blur,
     bright,
@@ -18,7 +18,7 @@ from Shikimori.Extras.ImageEditor.edit_1 import (  # pylint:disable=import-error
     mix,
     normal_blur,
 )
-from Shikimori.Extras.ImageEditor.edit_2 import (  # pylint:disable=import-error
+from image.edit_2.py import (  # pylint:disable=import-error
     cartoon,
     circle_with_bg,
     circle_without_bg,
@@ -28,7 +28,7 @@ from Shikimori.Extras.ImageEditor.edit_2 import (  # pylint:disable=import-error
     sepia_mode,
     sticker,
 )
-from Shikimori.Extras.ImageEditor.edit_3 import (  # pylint:disable=import-error
+from image.edit_3.py import (  # pylint:disable=import-error
     black_border,
     blue_border,
     green_border,
