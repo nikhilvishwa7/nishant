@@ -31,7 +31,7 @@ from telegram.ext import CommandHandler
 
 import random
 # Imports dispatcher = updater.dispatcher from __init__.py (*MUST EDIT* CHANGE MODULE NAME TO THE FOLDER NAME OF MODULES IN YOUR BOT)
-from Shikimori import dispatcher
+from pyrogram import dispatcher
 
 # Main code, Credit to https://github.com/itspro-dev for making the API. 
 
