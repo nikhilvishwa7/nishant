@@ -30,7 +30,7 @@ from telethon import events
 from pyrogram import filters
 from pyrogram import Client
 
-@Client.on_message(events.NewMessage(pattern="/fakegen$"))
+@Client.on_message(events.NewMessage(pattern="/fakegen"))
 async def hi(event):
     fake = Faker()
     print("FAKE DETAILS GENERATED\n")
@@ -50,7 +50,7 @@ async def hi(event):
 
 @Client.on_message(filters.command('picgen'))
 async def picgen(_, message):
-    img = "https://thispersondoesnotexist.com/image"
+    img = "https://thispersondoesnotexist.com"
     text = f"Fake Image successfully generated."
     await message.reply_photo(photo=img, caption=text)
 
