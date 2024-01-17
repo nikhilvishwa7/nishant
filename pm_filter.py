@@ -1646,7 +1646,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         query.message.edit_caption(f"""
  ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ
 """,
-            parse_mode=ParseMode.MARKDOWN,
             
             reply_markup=InlineKeyboardMarkup(
                 [
