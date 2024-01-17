@@ -1632,27 +1632,37 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "main":
-        query.message.edit_caption(f"""
- ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ
-""",
-            
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text="📕 ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ", callback_data="management"),
-                        InlineKeyboardButton(text="ᴀʟʟ ᴄᴍɴᴅs ❍", callback_data="help")
-                    ],
-                    [
-                        InlineKeyboardButton(text="💁 ʙᴀsɪᴄ ", callback_data="basic_help"),
-                        InlineKeyboardButton(text="ᴇxᴘᴇʀᴛ 👮", callback_data="expert_help")
-                    ],
-                    [
-                        InlineKeyboardButton(text="🍹 sᴜᴘᴘᴏʀᴛ ", callback_data="group_info"),
-                        InlineKeyboardButton(text="ᴅᴏɴᴀᴛɪᴏɴ  🎉", callback_data="donate") 
-                    ],
-                    [InlineKeyboardButton(text="• ʜᴏᴍᴇ •", callback_data="start")]
-                ]
-            ),
+        buttons = [[
+            InlineKeyboardButton('📕 ᴍᴀɴᴀɢᴇᴍᴇɴᴛ', callback_data='management'),
+            InlineKeyboardButton('ᴀʟʟ ᴄᴍɴᴅs ❍', callback_data='help')
+         ], [
+            InlineKeyboardButton('💁 ʙᴀsɪᴄ', callback_data='basic_help'),
+            InlineKeyboardButton('ᴇxᴘᴇʀᴛ 👮', callback_data='expert_help')
+         ], [
+            InlineKeyboardButton('🍹 sᴜᴘᴘᴏʀᴛ', callback_data='group_info'),
+            InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  🎉', callback_data='donate')
+         ], [
+            InlineKeyboardButton('• ʜᴏᴍᴇ •', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id,
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text="● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ●"
+        )
+        await query.message.edit_text(
+            text=script.MAIN_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "help":
         buttons = [[
