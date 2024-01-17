@@ -27,6 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from faker import Faker
 from faker.providers import internet
 from telethon import events
+from pyrogram import Client as Koshik
 from pyrogram import filters
 from pyrogram import Client
 
