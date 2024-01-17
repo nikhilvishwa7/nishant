@@ -30,7 +30,7 @@ from telethon import events
 from pyrogram import filters
 from pyrogram import Client
 
-@Client.on(events.NewMessage(pattern="/fakegen$"))
+@Client.on_message(events.NewMessage(pattern="/fakegen$"))
 async def hi(event):
     fake = Faker()
     print("FAKE DETAILS GENERATED\n")
