@@ -2,60 +2,69 @@ import os
 import requests
 import pyrogram
 import json
+from info import SUPPORT_CHAT
 from pyrogram import Client as Koshik
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client, filters
 
 
-@Client.on_message(filters.command(["github","git"]))
-async def github(_, message):
-    if len(message.command) != 2:
-        return await message.reply_text("/github {username} \n`/github testing`")
-    username = message.text.split(None, 1)[1]
-    URL = f"https://api.github.com/users/{username}"
-    async with ClientSession() as session:
-        async with session.get(URL) as request:
-            if request.status == 404:
-                return await message.reply_text("404")
-            result = await request.json()
-            try:
-                url = result["html_url"]
-                name = result["name"]
-                company = result["company"]
-                bio = result["bio"]
-                created_at = result["created_at"]
-                avatar_url = result["avatar_url"]
-                blog = result["blog"]
-                location = result["location"]
-                repositories = result["public_repos"]
-                followers = result["followers"]
-                following = result["following"]
-                global Mukesh
-                Mukesh = [[
-            InlineKeyboardButton(text="ᴘʀᴏғɪʟᴇ ʟɪɴᴋ", url=url),
-            InlineKeyboardButton("Cʟᴏsᴇ",callback_data="close_reply")
-            ]]     
-                caption = f"""**Iɴғᴏ Oғ {name}**
-**ᴜsᴇʀɴᴀᴍᴇ :** `{username}`
-**ʙɪᴏ :** `{bio}`
-**ᴄᴏᴍᴘᴀɴʏ :** `{company}`
-**ᴄʀᴇᴀᴛᴇᴅ ᴏɴ:** `{created_at}`
-**ʀᴇᴘᴏsɪᴛᴏʀɪᴇs :** `{repositories}`
-**ʙʟᴏɢ :** `{blog}`
-**ʟᴏᴄᴀᴛɪᴏɴ :** `{location}`
-**ғᴏʟʟᴏᴡᴇʀs  :** `{followers}`
-**ғᴏʟʟᴏᴡɪɴɢ :** `{following}`"""
-            except Exception as e:
-                await message.reply(f"#ERROR {e}")
-                  
-    await message.reply_photo(photo=avatar_url, caption=caption,reply_markup=InlineKeyboardMarkup(Mukesh))
+def github(update: Update, context: CallbackContext):
+    args = update.effective_message.text.split(None, 1)
+    msg = update.effective_message
+    if len(args) != 2:
+        update.effective_message.reply_text("/github Username")
+        return
+    username = args[1]
+    URL = f'https://api.github.com/users/{username}'
+    result = requests.get(URL).json()
+    try:
+        m = msg.reply_text("`Searching.....`")
+        url = result['html_url']
+        name = result['name']
+        company = result['company']
+        bio = result['bio']
+        created_at = result['created_at']
+        avatar_url = result['avatar_url']
+        blog = result['blog']
+        location = result['location']
+        repositories = result['public_repos']
+        followers = result['followers']
+        following = result['following']
+        caption = f"""**Info Of {name}**
+**Username:** `{username}`
+**Bio:** `{bio}`
+**Profile Link:** [Here]({url})
+**Company:** `{company}`
+**Created On:** `{created_at}`
+**Repositories:** `{repositories}`
+**Blog:** `{blog}`
+**Location:** `{location}`
+**Followers:** `{followers}`
+**Following:** `{following}`"""
+        m.delete()
+        update.effective_message.reply_photo(avatar_url, caption=caption,reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Profile",
+                            url=url,
+                        ),
+                    ],
+                ],
+            ), parse_mode=ParseMode.MARKDOWN)
+    except Exception as e:
+        print(str(e))
+        update.effective_message.reply_text(f"ERROR!! Contact @{SUPPORT_CHAT}")
+        pass
 
+git_handler = CommandHandler(("git", "github"), github, run_async = True)
+dispatcher.add_handler(git_handler)
 
-__mod_name__ = "Gɪᴛʜᴜʙ"
-
+__mod_name__ = "Github 🐱‍💻"
 __help__ = """
-ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟᴇ. 
+Here is help for Github
 
- ❍ /github <ᴜsᴇʀɴᴀᴍᴇ> *:* ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.
+ ❍ `/github` <username> - Get information from a profile on GitHub.
+ ❍ `/git` <username> - Get information from a profile on GitHub.
 """
