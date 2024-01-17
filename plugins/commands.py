@@ -1,4 +1,4 @@
-#All this codes are created by our developers @exotixe @team_netflix @KUSHALHK
+#All this codes are created by our developers @erotixe @team_netflix @KUSHALHK
 #we are nothing without your support please support us to bring more features in bot
 #♛┈⛧┈┈•༶❤ 𝗟𝗢𝗩𝗘 𝗬𝗢𝗨 𝗔𝗟𝗟 ❤༶•┈┈⛧┈♛
 import os
@@ -51,7 +51,7 @@ async def start(client, message):
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url=CHNL_LNK),
                     InlineKeyboardButton('• ꜱᴜᴩᴩᴏʀᴛ •', callback_data='group_info')
                 ],[
-                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='main_help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
                     InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
@@ -108,7 +108,7 @@ async def start(client, message):
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url=CHNL_LNK),
                     InlineKeyboardButton('• ꜱᴜᴩᴩᴏʀᴛ •', callback_data='group_info')
                 ],[
-                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='main_help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
                     InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
