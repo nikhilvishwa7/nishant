@@ -68,3 +68,5 @@ uvloop
 lexica-api
 httpx[http2]
 bardapi
+
+faker
