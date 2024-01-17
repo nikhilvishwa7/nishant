@@ -27,9 +27,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from faker import Faker
 from faker.providers import internet
 from telethon import events
-from Shikimori import telethn as tbot
 from pyrogram import filters
-from Shikimori import Client
+from pyrogram import Client
 
 @Client.on(events.NewMessage(pattern="/fakegen$"))
 async def hi(event):
