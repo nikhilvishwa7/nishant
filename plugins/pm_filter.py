@@ -2009,7 +2009,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('❗❗ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data='disclaimer')
         ], [
             InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='source'),
-            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ', url=CHNL_LNK)
+            InlineKeyboardButton('ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
