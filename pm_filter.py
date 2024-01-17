@@ -1587,7 +1587,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='main_help'),
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='main'),
                     InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
                     InlineKeyboardButton("• ᴊᴏɪɴ ᴏᴜʀ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ •", url="https://t.me/movieflix_original")
@@ -1642,7 +1642,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "Main_help":
+    elif query.data == "main":
         query.message.edit_caption(f"""
  ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
 """,
