@@ -2,14 +2,13 @@ from pyrogram import dispatcher
 from info import NETWORK_USERNAME
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
 
-from telegram.ext import (
-    CallbackContext,
-    CommandHandler,
-)
-
 PHOTO = "https://graph.org/file/f6e3a9853109ff418c398.jpg"
 
 network_name = NETWORK_USERNAME.lower()
+
+@Client.on_message(filters.private & filters.command("network", "net"))
+async def network(_, message):
+    await message.reply_text("ᴡᴀɪᴛ ʙʀᴏ...!")
 
 if network_name == "Team_Netflix":
     def uchiha(update: Update, context: CallbackContext):
@@ -34,11 +33,6 @@ if network_name == "Team_Netflix":
                 ]
             ),
         )
-
-
-@Client.on_message(filters.private & filters.command('network'))
-async def network(client, message):
-
     __help__ = """
     ──「ᴀʙᴏᴜᴛ • ᴛᴇᴀᴍ ɴᴇᴛғʟɪx 」──                         
     
