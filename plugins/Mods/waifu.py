@@ -56,8 +56,6 @@ def waifu(update, context):
 
 
 @Client.on_message(filters.command(["waifuinfo", "waifu"]))
-    f_onw_fliter
-)
 async def waifu(client, message):
     """ ᴡᴀɪᴛ ʙʀᴏ.. """
     status_message = await message.reply_text(
