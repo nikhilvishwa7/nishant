@@ -57,9 +57,17 @@ def waifu(update, context):
 
 @Client.on_message(filters.command(["waifu", "waifuinfo"]))
 async def waifu(_, message: Message):
-    await message.reply_photo(
-        photo=SRC_IMG,
-        caption=f"""**ʜᴇʏ {message.from_user.mention},
+    if not message.reply_to_message:
+        text = message.text.split(None, 1)[1]
+        m = await message.reply_text("<b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...</b>")
+ await message.reply_photo(
+            photo=req,
+            caption="""<b>✍  ʙʏ  -  <a href=https://telegram.me/team_netflix>@team_netflix</a></b>""",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("ᴍʏ ᴏᴡɴᴇʀ", url=f"https://t.me/VeldXd")]]
+            ),
+        )
+        await m.delete()
 
 # *IF YOU WANT* EDIT MESSAGE FOR HELP OF THIS MODULE.
 __help__ = '''
