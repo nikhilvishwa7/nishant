@@ -51,7 +51,7 @@ async def start(client, message):
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url=CHNL_LNK),
                     InlineKeyboardButton('• ꜱᴜᴩᴩᴏʀᴛ •', callback_data='group_info')
                 ],[
-                    InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
                     InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
@@ -108,7 +108,7 @@ async def start(client, message):
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url=CHNL_LNK),
                     InlineKeyboardButton('• ꜱᴜᴩᴩᴏʀᴛ •', callback_data='group_info')
                 ],[
-                    InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴅᴜʟᴇs •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
                     InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ʀᴇᴍᴏᴠᴇ ᴀᴅs •', callback_data="kushal")
