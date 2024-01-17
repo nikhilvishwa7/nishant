@@ -1642,9 +1642,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-
-    elif query.data == "main_help":
-        buttons = [[
+    elif query.data == "Main_help":
+        query.message.edit_caption(f"""
+ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
                         InlineKeyboardButton(text="📕 ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ", callback_data="management"),
                         InlineKeyboardButton(text="ᴀʟʟ ᴄᴍɴᴅs ❍", callback_data="help")
                     ],
@@ -1657,17 +1663,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         InlineKeyboardButton(text="ᴅᴏɴᴀᴛɪᴏɴ  🎉", callback_data="donate") 
                     ],
                     [InlineKeyboardButton(text="• ʜᴏᴍᴇ •", callback_data="start")]
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.MAIN_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+                ]
+            ),
         )
     elif query.data == "help":
         buttons = [[
