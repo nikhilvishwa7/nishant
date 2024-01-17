@@ -55,13 +55,11 @@ def waifu(update, context):
         msg.reply_text(text, parse_mode=ParseMode.HTML)
 
 
-# Code Handler (YOU CAN CHANGE 'waifu' TO ANY 'cmd' FOR THIS TO BE WORKED AS '/cmd' *IF YOU WANT*.)
-WAIFUINFO_HANDLER = CommandHandler('waifuinfo', waifu, run_async=True)
-dispatcher.add_handler(WAIFUINFO_HANDLER)
-
-#  Buttons for /help .
-__mod_name__ = 'Waifus'  # *IF YOU WANT* EDIT NAME OF BUTTON IN '/help'
-
+@Client.on_message(filters.command(["waifu", "waifuinfo"]))
+async def waifu(_, message: Message):
+    await message.reply_photo(
+        photo=SRC_IMG,
+        caption=f"""**ʜᴇʏ {message.from_user.mention},
 
 # *IF YOU WANT* EDIT MESSAGE FOR HELP OF THIS MODULE.
 __help__ = '''
