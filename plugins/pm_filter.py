@@ -2233,7 +2233,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "video":
             buttons = [[
-                    InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help")
+                    InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help"),
                     InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
                   ]]
             await client.edit_message_media(
