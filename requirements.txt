@@ -70,3 +70,4 @@ httpx[http2]
 bardapi
 
 faker
+telethon
