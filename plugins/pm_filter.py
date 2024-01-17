@@ -1633,7 +1633,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "main":
         query.message.edit_caption(f"""
- ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
+ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ
 """,
             parse_mode=ParseMode.MARKDOWN,
             
