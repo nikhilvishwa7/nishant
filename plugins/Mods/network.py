@@ -36,8 +36,8 @@ if network_name == "Team_Netflix":
         )
 
 
-    uchiha_handler = CommandHandler(("about", "network", "net"), uchiha, run_async = True)
-    dispatcher.add_handler(uchiha_handler)
+@Client.on_message(filters.private & filters.command('network'))
+async def network(client, message):
 
     __help__ = """
     ──「ᴀʙᴏᴜᴛ • ᴛᴇᴀᴍ ɴᴇᴛғʟɪx 」──                         
