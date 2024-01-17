@@ -10,7 +10,7 @@ from pyrogram.types import (
 )
 
 # By @veldxd
-from image.edit_1.py import import (  # pylint:disable=import-error
+from image.edit_1 import import (  # pylint:disable=import-error
     black_white,
     box_blur,
     bright,
@@ -18,7 +18,7 @@ from image.edit_1.py import import (  # pylint:disable=import-error
     mix,
     normal_blur,
 )
-from image.edit_2.py import (  # pylint:disable=import-error
+from image.edit_2 import (  # pylint:disable=import-error
     cartoon,
     circle_with_bg,
     circle_without_bg,
@@ -28,13 +28,13 @@ from image.edit_2.py import (  # pylint:disable=import-error
     sepia_mode,
     sticker,
 )
-from image.edit_3.py import (  # pylint:disable=import-error
+from image.edit_3 import (  # pylint:disable=import-error
     black_border,
     blue_border,
     green_border,
     red_border,
 )
-from Shikimori.Extras.ImageEditor.edit_4 import (  # pylint:disable=import-error
+from edit_4 import (  # pylint:disable=import-error
     inverted,
     removebg_plain,
     removebg_sticker,
@@ -44,7 +44,7 @@ from Shikimori.Extras.ImageEditor.edit_4 import (  # pylint:disable=import-error
     rotate_270,
     round_sticker,
 )
-from Shikimori.Extras.ImageEditor.edit_5 import (  # pylint:disable=import-error
+from edit_5 import (  # pylint:disable=import-error
     normalglitch_1,
     normalglitch_2,
     normalglitch_3,
@@ -56,12 +56,12 @@ from Shikimori.Extras.ImageEditor.edit_5 import (  # pylint:disable=import-error
     scanlineglitch_4,
     scanlineglitch_5,
 )
-from Shikimori import pbot
+from pyrogram import Client
 
 lel = 00000000
 # pylint:disable=import-error
-@pbot.on_message(filters.command(["edit", "editor"]))
-async def photo(client: pbot, message: Message):
+@Client.on_message(filters.command(["edit", "editor"]))
+async def photo(client: Client, message: Message):
     try:
         if not message.reply_to_message.photo:
             await client.send_message(message.chat.id, "Reply to an image man!ㅤㅤ")
@@ -126,7 +126,7 @@ async def photo(client: pbot, message: Message):
                 return
 
 
-@pbot.on_callback_query()
+@Client.on_callback_query()
 async def cb_handler(client: pbot, query: CallbackQuery):
     user_id = query.from_user.id
     if lel == user_id:
