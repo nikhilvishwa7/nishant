@@ -29,9 +29,9 @@ from faker.providers import internet
 from telethon import events
 from Shikimori import telethn as tbot
 from pyrogram import filters
-from Shikimori import pbot
+from Shikimori import Client
 
-@tbot.on(events.NewMessage(pattern="/fakegen$"))
+@Client.on(events.NewMessage(pattern="/fakegen$"))
 async def hi(event):
     fake = Faker()
     print("FAKE DETAILS GENERATED\n")
@@ -49,7 +49,7 @@ async def hi(event):
         parse_mode="HTML",
     )
 
-@pbot.on_message(filters.command('picgen'))
+@Client.on_message(filters.command('picgen'))
 async def picgen(_, message):
     img = "https://thispersondoesnotexist.com/image"
     text = f"Fake Image successfully generated."
