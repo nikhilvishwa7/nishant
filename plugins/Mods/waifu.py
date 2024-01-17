@@ -55,8 +55,7 @@ def waifu(update, context):
         msg.reply_text(text, parse_mode=ParseMode.HTML)
 
 
-@Client.on_message(
-    filters.command(["waifu", "waifuinfo"]
+@Client.on_message(filters.command(["waifuinfo", "waifu"]))
     f_onw_fliter
 )
 async def waifu(client, message):
