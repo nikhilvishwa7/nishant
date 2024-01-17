@@ -1,12 +1,13 @@
 from pyrogram import dispatcher
 from info import NETWORK_USERNAME
+from pyrogram import Client, filters
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
 
 PHOTO = "https://graph.org/file/f6e3a9853109ff418c398.jpg"
 
 network_name = NETWORK_USERNAME.lower()
 
-@Client.on_message(filters.private & filters.command("network", "net"))
+@Client.on_message(filters.private & filters.command("network", "about"))
 async def network(_, message):
     await message.reply_text("ᴡᴀɪᴛ ʙʀᴏ...!")
 
