@@ -14,7 +14,8 @@
 
 <details>
   <summary><b>ꜰᴇᴀᴛᴜʀᴇs :</b></summary>
-  
+
+ </details> 
 ## ꜰᴇᴀᴛᴜʀᴇs
 - [x] 𝐼𝑀𝐷𝐵 𝑇𝑒𝑚𝑝𝑙𝑎𝑡𝑒 𝑆𝑒𝑡
 - [x] 𝐼𝑛𝑑𝑒𝑥𝑒𝑠 𝐹𝑖𝑙𝑒𝑠 𝑎𝑏𝑜𝑣𝑒 2𝐺𝐵
@@ -91,6 +92,31 @@
   <summary><b>ᴄᴏᴍᴍᴀɴᴅs :</b></summary>
   
 ## ᴄᴏᴍᴍᴀɴᴅs
+/start - to check i am in alive
+/help - to get the help messages
+/telegraph - reply to a media
+/ask - your query
+/song - to get the song from youtube
+/ringtune - to get the ringtune
+/stickerid - to get the sticker id
+/spotify - to get the details of song from spotify
+/repo - to search repo from github
+/broadcast - to broadcast a message to all bot users
+/stats - to get the users of the bot
+/report - to reply the message in the group for report to admins
+/fp - to send your feedback by publically 
+/fa - to send yiur feedback by anonymously 
+/font - to change the normal to sd fonts
+/t2f - to convert the text to file with any text file formats
+and more....
+
+ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs
+
+• ᴜsᴇʀs - ᴛᴏ ᴠɪᴇᴡ ᴏғ ʟɪsᴛᴏғ ᴜsᴇʀs, ᴜsɪɴɢ ʙᴏᴛ [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ]
+• ʙʀᴏᴀᴅᴄᴀsᴛ - ᴍᴇssᴀɢᴇ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴍᴀɴᴅ [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ]
+• ʙᴀɴ - ʟᴇᴛs ʏᴏᴜ ʙᴀɴ ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ ᴡɪᴛʜᴏᴜᴛ ɢɪᴠɪɴɢ ʜɪᴍ ᴛʜᴇ ᴘᴏssɪʙɪʟɪᴛʏ ᴛᴏ Jᴏɪɴ ᴀɢᴀɪɴ ᴜsɪɴɢ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ. [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ].
+• sᴇᴛᴛɪɴɢs - ʟᴇᴛs ʏᴏᴜ ᴍᴀɴᴀɢᴇ ᴀʟʟ ᴛʜᴇ Bᴏᴛ sᴇᴛᴛɪɴɢs ɪɴ ᴀ ɢʀᴏᴜᴘ.  [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ]
+• ᴍᴜᴛᴇ/ᴋɪᴄᴋ - ʟᴇᴛs ʏᴏᴜ ʀᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ ɢʀᴏᴜᴘ's ʙʟᴀᴄᴋʟɪsᴛ, ɢɪᴠɪɴɢ ᴛʜᴇᴍ ᴛʜᴇ ᴘᴏssɪʙɪʟɪᴛʏ ᴛᴏ Jᴏɪɴ ᴀɢᴀɪɴ ᴡɪᴛʜ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.  [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ].
 
 </details>
 
