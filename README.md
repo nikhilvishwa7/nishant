@@ -93,22 +93,23 @@
   <summary><b>ᴄᴏᴍᴍᴀɴᴅs :</b></summary>
   
 ## ᴄᴏᴍᴍᴀɴᴅs
-• /start - to check i am in alive
-• /help - to get the help messages
-• /telegraph - reply to a media
-• /ask - your query
-• /song - to get the song from youtube
-• /ringtune - to get the ringtune
-• /stickerid - to get the sticker id
-• /spotify - to get the details of song from spotify
-• /repo - to search repo from github
-• /broadcast - to broadcast a message to all bot users
-• /stats - to get the users of the bot
-• /report - to reply the message in the group for report to admins
-• /fp - to send your feedback by publically 
-• /fa - to send yiur feedback by anonymously 
-• /font - to change the normal to sd fonts
-• /t2f - to convert the text to file with any text file formats
+- [x] start - to check i am in alive
+- [x] help - to get the help messages
+- [x] telegraph - reply to a media
+- [x] ask - your query
+- [x] song - to get the song from youtube
+- [x] ringtune - to get the ringtune
+- [x] stickerid - to get the sticker id
+- [x] spotify - to get the details of song from spotify
+- [x] repo - to search repo from github
+- [x] broadcast - to broadcast a message to all bot users
+- [x] stats - to get the users of the bot
+- [x] report - to reply the message in the group for report to admins
+- [x] fp - to send your feedback by publically 
+- [x] fa - to send yiur feedback by anonymously 
+- [x] font - to change the normal to sd fonts
+- [x] t2f - to convert the text to file with any text file formats
+
 and more....
 
 ## ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs
