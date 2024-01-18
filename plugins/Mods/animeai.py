@@ -4,11 +4,8 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # Environments / Configs
-API_HASH = environ.get('API_HASH', 'da7e86cf57b0e6220b8a9e0aed228a68')
-API_ID = int(environ.get('API_ID', '23890262'))
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
 API_KEY = os.environ.get('API_KEY', 'AIzaSyAjlZfV8QfFmXRIyAdBfrqf2TdHHJgJ3o0')
-OWNER_ID = os.environ.get('OWNER_ID', "6497757690")
+
 
 # See Documentation for more details (api.xgorn.pp.ua/docs)
 SAMPLER = os.environ.get('SAMPLER', 'k_euler_a')
