@@ -1,3 +1,6 @@
+# credit t.me/sd_bots
+
+
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 import requests
@@ -20,7 +23,7 @@ async def ai_generate(client, message):
   
     if user_input.lower() in ["who is your owner", "what is your owner name"]:  
         buttons = [[
-            InlineKeyboardButton("developer", url="https://t.me/sd_bots")
+            InlineKeyboardButton("developer", url="https://t.me/veldxd")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker("CAACAgUAAxkBAAIVNWWpG1nHAAF4MDZ1GyYzlT24ruxuOgACbQgAAqkDGFZZit7uxEySIh4E")
