@@ -1,6 +1,3 @@
-# credit t.me/sd_bots
-
-
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 import requests
@@ -8,27 +5,28 @@ from info import LOG_CHANNEL, GOOGLE_API_KEY
 import google.generativeai as genai
 
 genai.configure(api_key=GOOGLE_API_KEY)
-# how to get the api key == https://t.me/sd_bots/256 (copy this link and search on telegram)
 
-@Client.on_message(filters.command("ask") & filters.group)
+@Client.on_message(filters.command("ai") & filters.group)
 async def ai_generate(client, message):
     user_input = message.text.split()[1:]
 
     if not user_input:
-        await message.reply_text("Please provide your question after /ask")
+        await message.reply_text("Please provide your question after /ai")
         return
 
     user_input = " ".join(user_input)
-    s = await message.reply_sticker("CAACAgUAAxkBAAIVNWWpG1nHAAF4MDZ1GyYzlT24ruxuOgACbQgAAqkDGFZZit7uxEySIh4E")
+    await client.send_message(REQUESTED_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
+    s = await message.reply_sticker("CAACAgUAAxkBAAIj-mWlAjaflbkifrOJPnnxp2edkuD-AALPDAACzIApVcg9eEkNQbBGHgQ")
   
     if user_input.lower() in ["who is your owner", "what is your owner name"]:  
         buttons = [[
-            InlineKeyboardButton("developer", url="https://t.me/veldxd")
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/weebs_support")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker("CAACAgUAAxkBAAIVNWWpG1nHAAF4MDZ1GyYzlT24ruxuOgACbQgAAqkDGFZZit7uxEySIh4E")
+        await message.reply_sticker("CAACAgUAAxkBAAIjWGWkDiJW1Dyn6n8CjbbwxExf0FEIAAJyCgACywLBVKKgVw2dk9PbHgQ")
         await message.reply_text(text=f"ʜᴇʏ {message.from_user.mention}", reply_markup=reply_markup)
         return
+        await s.delete()
       
     generation_config = {
         "temperature": 0.9,
@@ -64,14 +62,15 @@ async def ai_generate(client, message):
 
     prompt_parts = [user_input]
     response = model.generate_content(prompt_parts)
-    await message.reply_text(response.text)
+    response = model.generate_content(prompt_parts)
+    await message.reply_text(f"ʜᴇʏ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}\n\n{response.text}")
     await client.send_message(LOG_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
-    await s.delete()
-@Client.on_message(filters.command("ask") & filters.private)
+    
+@Client.on_message(filters.command("ai") & filters.private)
 async def ai_generate_private(client, message):
   buttons = [[
     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/weebs_support")
   ]]
   reply_markup = InlineKeyboardMarkup(buttons)
-  await message.reply_sticker("CAACAgUAAxkBAAIVNWWpG1nHAAF4MDZ1GyYzlT24ruxuOgACbQgAAqkDGFZZit7uxEySIh4E")
+  await message.reply_sticker("CAACAgUAAxkBAAIjWGWkDiJW1Dyn6n8CjbbwxExf0FEIAAJyCgACywLBVKKgVw2dk9PbHgQ")
   await message.reply_text(text=f"ʜᴇʏ {message.from_user.mention}\nᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ ɪɴ ɢʀᴏᴜᴘ", reply_markup=reply_markup)
