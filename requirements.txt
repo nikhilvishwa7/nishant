@@ -71,4 +71,4 @@ bardapi
 
 faker
 telethon
-xgorn-api
+google-generativeai
