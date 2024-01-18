@@ -71,3 +71,4 @@ bardapi
 
 faker
 telethon
+xgorn-api
