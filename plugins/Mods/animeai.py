@@ -33,7 +33,7 @@ def get_text(update) -> [None, str]:
 
 
 # Running bot
-xbot = Client('Anime-Ai', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+xbot = Client('Anime-Ai', api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # Generating
 @xbot.on_message(filters.command('animeai') & filters.private)
