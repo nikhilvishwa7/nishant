@@ -72,7 +72,10 @@ bardapi
 faker
 telethon
 google-generativeai
-youtube-search
-youtube-search-python
+youtube_search
+youtube_search_python
+youtube-search-python==1.4.6
+yt-dlp==2023.2.17
+youtube-dl
 spotdl
 pyrogram
