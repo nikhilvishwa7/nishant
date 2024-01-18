@@ -6,6 +6,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Client.on_message(filters.private & filters.command(["font"]))
 async def style_buttons(c, m, cb=False):
+    text_to_stylize = message.text.split(" ", 1)[1]  
+    style_buttons = Font.SD(text_to_stylize)  
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
@@ -174,6 +176,7 @@ async def style(c, m):
         await m.message.edit_text(f"`{new_text}`\n\n<b>👆 Click To Copy 👆</b>", reply_markup=m.message.reply_markup)
     except Exception as e:
         print(e)
-
+    await message.reply_text(f"ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴛᴇxᴛ: <code>{stylized_text}</code>")
+    await client.send_message(LOG_CHANNEL, text=f"ʀᴇǫᴜᴇsᴛᴇᴅ ғʀᴏᴍ {message.from_user.mention}\n ᴛᴇxᴛ ɪs {text_to_stylize}")
 
 
