@@ -75,3 +75,4 @@ google-generativeai
 youtube-search
 youtube-search-python
 spotdl
+pyrogram
