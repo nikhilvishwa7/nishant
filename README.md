@@ -87,6 +87,7 @@
 * `SPOTIFY_CLIENT_ID` : Get the value from [spotify developer](https://developer.spotify.com/)
 * `SPOTIFY_CLIENT_SECRET` : Get the value from [spotify developer](https://developer.spotify.com/)
 * Check [info.py](https://github.com/erotixe/AutoFilter/blob/main/info.py) for more optional variables
+</details>
 
 <details>
   <summary><b>ᴄᴏᴍᴍᴀɴᴅs :</b></summary>
