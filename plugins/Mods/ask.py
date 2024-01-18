@@ -6,24 +6,24 @@ import google.generativeai as genai
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
-@Client.on_message(filters.command("ai") & filters.group)
+@Client.on_message(filters.command("ask") & filters.group)
 async def ai_generate(client, message):
     user_input = message.text.split()[1:]
 
     if not user_input:
-        await message.reply_text("Please provide your question after /ai")
+        await message.reply_text("Please provide your question after /ask")
         return
 
     user_input = " ".join(user_input)
     await client.send_message(LOG_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
-    s = await message.reply_sticker("CAACAgUAAxkBAAIj-mWlAjaflbkifrOJPnnxp2edkuD-AALPDAACzIApVcg9eEkNQbBGHgQ")
+    s = await message.reply_sticker("CAACAgUAAxkBAAEBVPFlqURKlcRL5gwsCr_95NUy1yomWAACbQgAAqkDGFZZit7uxEySIh4E")
   
     if user_input.lower() in ["who is your owner", "what is your owner name"]:  
         buttons = [[
             InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/weebs_support")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker("CAACAgUAAxkBAAIjWGWkDiJW1Dyn6n8CjbbwxExf0FEIAAJyCgACywLBVKKgVw2dk9PbHgQ")
+        await message.reply_sticker("CAACAgUAAxkBAAEBVPFlqURKlcRL5gwsCr_95NUy1yomWAACbQgAAqkDGFZZit7uxEySIh4E")
         await message.reply_text(text=f"ʜᴇʏ {message.from_user.mention}", reply_markup=reply_markup)
         return
         await s.delete()
@@ -66,11 +66,11 @@ async def ai_generate(client, message):
     await message.reply_text(f"ʜᴇʏ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}\n\n{response.text}")
     await client.send_message(LOG_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
     
-@Client.on_message(filters.command("ai") & filters.private)
+@Client.on_message(filters.command("ask") & filters.private)
 async def ai_generate_private(client, message):
   buttons = [[
     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/weebs_support")
   ]]
   reply_markup = InlineKeyboardMarkup(buttons)
-  await message.reply_sticker("CAACAgUAAxkBAAIjWGWkDiJW1Dyn6n8CjbbwxExf0FEIAAJyCgACywLBVKKgVw2dk9PbHgQ")
+  await message.reply_sticker("CAACAgUAAxkBAAEBVPFlqURKlcRL5gwsCr_95NUy1yomWAACbQgAAqkDGFZZit7uxEySIh4E")
   await message.reply_text(text=f"ʜᴇʏ {message.from_user.mention}\nᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ ɪɴ ɢʀᴏᴜᴘ", reply_markup=reply_markup)
