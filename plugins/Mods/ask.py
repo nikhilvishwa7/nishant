@@ -15,7 +15,7 @@ async def ai_generate(client, message):
         return
 
     user_input = " ".join(user_input)
-    await client.send_message(REQUESTED_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
+    await client.send_message(LOG_CHANNEL, text=f"#google_ai ʀᴇǫᴜᴇsᴛ ғʀᴏᴍ {message.from_user.mention}\nǫᴜᴇʀʏ ɪs:- {user_input}")
     s = await message.reply_sticker("CAACAgUAAxkBAAIj-mWlAjaflbkifrOJPnnxp2edkuD-AALPDAACzIApVcg9eEkNQbBGHgQ")
   
     if user_input.lower() in ["who is your owner", "what is your owner name"]:  
