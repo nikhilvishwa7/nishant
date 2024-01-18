@@ -72,3 +72,6 @@ bardapi
 faker
 telethon
 google-generativeai
+youtube-search
+youtube-search-python
+spotdl
