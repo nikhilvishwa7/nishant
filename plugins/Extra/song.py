@@ -31,11 +31,6 @@ async def download_song(client, message):
   yt = YouTube(f"https://www.youtube.com{song_url}")
   thumbnail_url = yt.thumbnail_url 
 
-  audio_streams = yt.streams.filter(only_audio=True)
-  if not audio_streams:
-    await message.reply("ɴᴏ ᴀᴜᴅɪᴏ sᴛᴇᴇᴀᴍ ғᴏᴜɴᴅ ғᴏʀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ᴠɪᴅᴇᴏs")
-    return
-
   video = audio_streams.first()
   audio_filename = f"{song_title}.mp3"
 
