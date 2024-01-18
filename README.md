@@ -85,7 +85,7 @@
 /t2f - to convert the text to file with any text file formats
 and more....
 
-### ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs
+ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs
 
 • ᴜsᴇʀs - ᴛᴏ ᴠɪᴇᴡ ᴏғ ʟɪsᴛᴏғ ᴜsᴇʀs, ᴜsɪɴɢ ʙᴏᴛ [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ]
 • ʙʀᴏᴀᴅᴄᴀsᴛ - ᴍᴇssᴀɢᴇ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴍᴀɴᴅ [ғᴏʀ ᴀᴅᴍɪɴs ᴜsᴇ ᴏɴʟʏ]
