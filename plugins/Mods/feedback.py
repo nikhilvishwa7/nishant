@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.types import *
 from info import LOG_CHANNEL
 
 @Client.on_message(filters.command("feedback"))
@@ -17,4 +18,4 @@ async def feedback_a(client, message):
   fa = message.text.split(" ", 1)[1]
   await message.reply_text(f"ʜɪ {message.from_user.mention},\n ᴛʜᴀɴᴋ ᴜ ғᴏʀ ᴛʜᴇ ғᴇᴇᴅʙᴀᴄᴋ")
 
-  await client.send_message(LOG_CHANNEL, text=f"#ɴᴇᴡ_ғᴇᴇᴅʙᴀᴄᴋ_ᴀɴᴏɴʏᴍᴏᴜsʟʏ\n\nᴛʜᴇ ᴛᴇxᴛ ɪs : <code>{fa}</code>")
+  await client.send_message(LOG_CHANNEL, text=f"#ɴᴇᴡ_ғᴇᴇᴅʙᴀᴄᴋ_ᴀɴᴏɴʏᴍᴏᴜsʟʏ\nғᴇᴇᴅʙᴀᴄᴋ ғʀᴏᴍ {message.from_user.mention}</b>\n ᴛʜᴇ ᴛᴇxᴛ ɪs : <code>{fa}</code>")
