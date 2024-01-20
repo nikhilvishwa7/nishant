@@ -9,7 +9,7 @@ from pyrogram.types import *
 from pyrogram.types import Message
 
 from info import PREFIX
-cmd = info.PREFIX
+cmd = PREFIX
 from helper.basic import edit_or_reply, get_text
 from helper.memes import MEMES
 
