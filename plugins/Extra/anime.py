@@ -7,7 +7,7 @@ from plugins.helper.utils import Automato
 API_URL = "https://api.nekosapi.com/v2/images/random"
 
 
-@Automato.on_message(filters.command(["anime"], Config.PREFIX) & filters.private)
+@Automato.on_message(filters.command(["anime"], PREFIX) & filters.private)
 async def random_anime(client: Client, message: Message):
     # Send the "Processing..." message
     dx = await message.reply_text("Fetching a random anime image...")
