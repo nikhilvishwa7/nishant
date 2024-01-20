@@ -7,7 +7,7 @@
 import math, time
 from datetime import datetime
 from pytz import timezone
-from info import info 
+from info import LOG_CHANNEL 
 from pyrogram import Client
 from pyrogram.types import Message
 
@@ -64,12 +64,12 @@ def convert(seconds):
     return "%d:%02d:%02d" % (hour, minutes, seconds)
 
 async def send_log(b, u):
-    if Config.LOG_CHANNEL is not None:
+    if info.LOG_CHANNEL is not None:
         curr = datetime.now(timezone("Asia/Kolkata"))
         date = curr.strftime('%d %B, %Y')
         time = curr.strftime('%I:%M:%S %p')
         await b.send_message(
-            Config.LOG_CHANNEL,
+            info.LOG_CHANNEL,
             f"**--Nᴇᴡ Uꜱᴇʀ Sᴛᴀʀᴛᴇᴅ Tʜᴇ Bᴏᴛ--**\n\nUꜱᴇʀ: {u.mention}\nIᴅ: `{u.id}`\nUɴ: @{u.username}\n\nDᴀᴛᴇ: {date}\nTɪᴍᴇ: {time}\n\nBy: {b.mention}"
         )
         
