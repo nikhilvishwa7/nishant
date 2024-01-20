@@ -12,7 +12,7 @@ import traceback
 from info import PREFIX
 from requests import post
 from subprocess import getoutput as run
-from helper.utils import Automato
+from plugins.helper.utils import Automato
 from pyrogram import filters
 from pyrogram.types import (
     CallbackQuery,
