@@ -93,3 +93,4 @@ shazamio
 google-generativeai
 
 bs4
+prettytable
