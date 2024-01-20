@@ -8,7 +8,7 @@ from plugins.helper.basic import edit_or_reply
 from plugins.helper.utility import split_list
 from plugins.helper.utils import Automato
 
-@Client.on_message(filters.command(["help"], & filters.private)
+@Client.on_message(filters.command(["help"], filters.private)
 async def module_help(client: Client, message: Message):
     cmd = message.command
     help_arg = ""
