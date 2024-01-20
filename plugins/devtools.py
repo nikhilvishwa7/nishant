@@ -1,15 +1,15 @@
-# Copyright (C) 2023 DX-MODS
+# Copyright (C) 2023 CodeFlix_Bots (telegram)
 #Licensed under the  AGPL-3.0 License;
 #you may not use this file except in compliance with the License.
-#Author ZIYAN
-#if you use our codes try to donate here https://www.buymeacoffee.com/ziyankp
+#Author MIKEY
+#if you use our codes try to donate here https://t.me/VeldXd
 
 import sys
 import requests
 import io
 import time
 import traceback
-from config import Config
+from info import info
 from requests import post
 from subprocess import getoutput as run
 from helper.utils import Automato
