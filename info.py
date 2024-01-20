@@ -91,6 +91,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
+RemoveBG_API = environ.get("RemoveBG_API", "BBfqJQTBznNFqg4R7VESNW46")
 BOT_USERNAME = environ.get("BOT_USERNAME", "Lucy_Filter_bot")
 BOT_NAME = environ.get("BOT_NAME", "𝐋ᴜᴄʏ")
 NETWORK_USERNAME = environ.get("NETWORK_USERNAME", "team_netflix")
