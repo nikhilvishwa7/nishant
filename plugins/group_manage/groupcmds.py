@@ -4,11 +4,11 @@ from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
 from info import PREFIX
-cmd = info.PREFIX
-from helper.basic import edit_or_reply
-from helper.parser import mention_html, mention_markdown
-from plugins.help import *
-from helper.utils import Automato
+cmd = PREFIX
+from plugins.helper.basic import edit_or_reply
+from plugins.helper.parser import mention_html, mention_markdown
+from plugins.helper.help import *
+from plugins.helper.utils import Automato
 
 
 @Client.on_message(filters.me & filters.command(["admins", "adminlist"], cmd))
