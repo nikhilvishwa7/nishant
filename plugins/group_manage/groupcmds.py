@@ -3,7 +3,7 @@ import html
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from info import info
+from info import PREFIX
 cmd = info.PREFIX
 from helper.basic import edit_or_reply
 from helper.parser import mention_html, mention_markdown
