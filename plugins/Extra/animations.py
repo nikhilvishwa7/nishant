@@ -8,7 +8,7 @@ from pyrogram.errors.exceptions.flood_420 import FloodWait
 from pyrogram.types import *
 from pyrogram.types import Message
 
-from info import info
+from info import PREFIX
 cmd = info.PREFIX
 from helper.basic import edit_or_reply, get_text
 from helper.memes import MEMES
