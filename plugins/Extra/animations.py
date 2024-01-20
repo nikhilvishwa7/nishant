@@ -13,7 +13,7 @@ cmd = PREFIX
 from plugins.helper.basic import edit_or_reply, get_text
 from plugins.helper.memes import MEMES
 
-from .help import *
+from plugins.help import *
 
 DEFAULTUSER = "Man"
 
