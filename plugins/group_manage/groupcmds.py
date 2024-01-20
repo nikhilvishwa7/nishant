@@ -7,7 +7,7 @@ from info import PREFIX
 cmd = PREFIX
 from plugins.helper.basic import edit_or_reply
 from plugins.helper.parser import mention_html, mention_markdown
-from plugins.helper.help import *
+from plugins.help import *
 from plugins.helper.utils import Automato
 
 
