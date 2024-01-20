@@ -9,7 +9,7 @@ import requests
 import io
 import time
 import traceback
-from info import info
+from info import PREFIX
 from requests import post
 from subprocess import getoutput as run
 from helper.utils import Automato
@@ -26,7 +26,7 @@ def paste(text):
     res = post(url, data={"content": text, "extension": "txt"})
     return f"https://spaceb.in/{res.json()['payload']['id']}"
         
-@Automato.on_message(filters.user(Config.ADMIN) & filters.command("shell", Config.PREFIX) & filters.private)
+@Automato.on_message(filters.user(info.ADMINS) & filters.command("shell", info.PREFIX) & filters.private)
 def sh(_, m: Message):
     try:
         code = m.text.replace(m.text.split(" ")[0], "")
@@ -41,7 +41,7 @@ def sh(_, m: Message):
         h = m.reply(x)
         m.reply(e)
 
-@Automato.on_message(filters.user(Config.ADMIN) & filters.command("eva", Config.PREFIX))
+@Automato.on_message(filters.user(info.ADMINS) & filters.command("eva", info.PREFIX))
 async def eval(client, message):
     status_message = await message.reply_text("Processing ...")
     cmd = message.text.split(" ", maxsplit=1)[1]
