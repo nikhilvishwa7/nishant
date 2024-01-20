@@ -26,7 +26,7 @@ def paste(text):
     res = post(url, data={"content": text, "extension": "txt"})
     return f"https://spaceb.in/{res.json()['payload']['id']}"
         
-@Automato.on_message(filters.user(info.ADMINS) & filters.command("shell", info.PREFIX) & filters.private)
+@Automato.on_message(filters.user(info.ADMINS) & filters.command("shell", PREFIX) & filters.private)
 def sh(_, m: Message):
     try:
         code = m.text.replace(m.text.split(" ")[0], "")
