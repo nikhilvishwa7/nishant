@@ -94,4 +94,4 @@ google-generativeai
 
 bs4
 prettytable
-Pyrogram==2.0.106
+Pyrogram
