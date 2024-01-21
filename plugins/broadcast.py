@@ -29,7 +29,7 @@ async def users_broadcast(bot, message):
         pin = False
     users = await db.get_all_users()
     b_msg = message.reply_to_message
-    b_sts = await message.reply_text(text='Broadcasting your users messages...')
+    b_sts = await message.reply_text(text='ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ...')
     start_time = time.time()
     total_users = await db.total_users_count()
     done = 0
