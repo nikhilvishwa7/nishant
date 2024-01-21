@@ -9,7 +9,7 @@ from Script import script
 import time
 from utils import temp
 from pyrogram.errors import FloodWait
-from database.users_db import db
+from database.users_chats_db import db
 import re
 import json
 import base64
