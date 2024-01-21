@@ -5,7 +5,7 @@ from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOc
 from pyrogram.types import *
 from plugins.helper.fsub_helper import is_admin, can_ban_members, can_change_info
 
-MONGO = MONGODB_URL
+MONGO = DATABASE_URI
 mongo = MongoClient(MONGO)
 mongodb = mongo.HANSAKA
 db = mongodb.FSUB #db
