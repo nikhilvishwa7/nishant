@@ -60,6 +60,7 @@ PM = int(pm) if pm and id_pattern.search(pm) else None
 
 # Command
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
+PREFIX = environ.get("PREFIX", "/")
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
