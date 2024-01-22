@@ -57,15 +57,12 @@ openai==0.25.0
 python-telegram-bot==12.8
 doodstream
 unshortenit
-mdisky
 
 ### googletrans==4.0.0-rc1 ###
 python-decouple
 ytthumb
 YoutubeTags
 telebot==0.0.5
-uvloop
-httpx[http2]
 
 faker
 telethon
@@ -93,10 +90,8 @@ google-generativeai
 
 bs4
 prettytable
-Pyrogram
 TgCrypto
 uvloop
 lexica-api
 httpx[http2]
 python-dotenv
-lexica
