@@ -1,11 +1,11 @@
 # Copyright 2023 Qewertyy, MIT License
 
 from pyrogram import Client, filters, types as t
-from info import LOGGER
+from info import environ
 from plugins.helper.Utils import identifyPlatform,DownloadMedia,getContentType
 
 
-@Client.on_message(r'https?://.*instagram[^\s]+') & filters.incoming)
+@Client.on_message(filters.regex(pattern=environ.mediaPattern))
 @identifyPlatform
 async def media_downloader(_,m: t.Message):
     if m.url is None or m.platform is None:
