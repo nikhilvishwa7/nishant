@@ -24,7 +24,7 @@ async def aihelp(_: Client, m: t.Message):
         reply_markup=t.InlineKeyboardMarkup(
             [
                 [
-                    t.InlineKeyboardButton(text="ᴍʏ ᴏᴡɴᴇʀ",url="https://t.me/veldxd")
+                    t.InlineKeyboardButton(text="ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ",url="https://t.me/codeflix_bots")
                 ]
             ]
         )
