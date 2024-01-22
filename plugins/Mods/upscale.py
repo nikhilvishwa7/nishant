@@ -1,5 +1,5 @@
 from pyrogram import Client, filters, types as t
-from pluging.helper.Utils import getFile, UpscaleImages
+from plugins.helper.Utils import getFile, UpscaleImages
 import os
 
 @Client.on_message(filters.command(["upscale"]))
