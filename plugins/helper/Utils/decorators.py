@@ -1,6 +1,6 @@
 from functools import wraps
 import traceback,sys,re
-from info import LOG_CHANNEL
+from config import Config
 from .miscs import evaluateContent
 from urllib.parse import urlsplit
 
