@@ -1,6 +1,5 @@
 import logging
 import logging.config
-import datetime,logging, sys
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
@@ -21,16 +20,6 @@ from datetime import date, datetime
 import pytz
 from aiohttp import web
 from plugins import web_server
-
-StartTime = None
-Models = None
-
-TelegraphClient = GraphClient(
-    "LexicaAPI",
-    "https://t.me/LexicaAPI",
-    "LexicaAPI"
-)
-TelegraphClient.createAccount()
 
 class Bot(Client):
 
