@@ -94,7 +94,7 @@ google-generativeai
 bs4
 prettytable
 Pyrogram
-lexica
+TgCrypto
 uvloop
 lexica-api
 httpx[http2]
