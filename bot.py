@@ -37,7 +37,11 @@ TelegraphClient = GraphClient(
 TelegraphClient.createAccount()
 
 class Bot(Client):
-
+    global StartTime,Models
+    StartTime = datetime.datetime.now()
+    api = ApiClient()
+    Models = api.getModels()['models']['image']
+    #print(Models)
     def __init__(self):
         super().__init__(
             name=SESSION,
