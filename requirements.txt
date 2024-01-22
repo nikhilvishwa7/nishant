@@ -99,3 +99,4 @@ uvloop
 lexica-api
 httpx[http2]
 python-dotenv
+lexica
