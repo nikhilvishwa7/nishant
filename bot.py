@@ -21,6 +21,7 @@ from pyrogram import types
 from Script import script 
 from datetime import date, datetime 
 import pytz
+from datetime import datetime
 from aiohttp import web
 from plugins import web_server
 from lexica import Client as ApiClient
@@ -38,7 +39,7 @@ TelegraphClient.createAccount()
 
 class Bot(Client):
     global StartTime,Models
-    StartTime = datetime.datetime.now()
+    StartTime = time.time()
     api = ApiClient()
     Models = api.getModels()['models']['image']
     #print(Models)
