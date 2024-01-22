@@ -6,7 +6,7 @@ import datetime,logging, sys
 from pyrogram import Client
 from lexica import Client as ApiClient
 from config import Config
-from Utils.telegraph import GraphClient
+from plugins.helper.Utils.telegraph import GraphClient
 
 # Get logging configurations
 logging.basicConfig(
