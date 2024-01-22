@@ -86,7 +86,6 @@ youtube-search-python
 spotdl
 Pillow
 wget
-discord
 moviepy==1.0.3
 pydub
 shazamio
@@ -100,4 +99,3 @@ uvloop
 lexica-api
 httpx[http2]
 python-dotenv
-datetime
