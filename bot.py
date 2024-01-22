@@ -1,7 +1,5 @@
 import logging
 import logging.config
-import uvloop
-uvloop.install()
 import datetime,logging, sys
 
 # Get logging configurations
@@ -21,11 +19,8 @@ from pyrogram import types
 from Script import script 
 from datetime import date, datetime 
 import pytz
-from datetime import datetime
 from aiohttp import web
 from plugins import web_server
-from lexica import Client as ApiClient
-from plugins.helper.Utils.telegraph import GraphClient
 
 StartTime = None
 Models = None
