@@ -95,3 +95,8 @@ google-generativeai
 bs4
 prettytable
 Pyrogram
+
+uvloop
+lexica-api
+httpx[http2]
+python-dotenv
