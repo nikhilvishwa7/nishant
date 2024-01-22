@@ -5,7 +5,7 @@ from plugins.helper.Utils import getText,paginate_models,ImageGeneration
 from bott import Models
 Database = {}
 
-@Client.on_message(filters.command(["draw","create","aiimg","dream"]))
+@Client.on_message(filters.command(["draw","create","imagine","dream"]))
 async def draw(_: Client, m: t.Message):
     global Database
     prompt = getText(m)
