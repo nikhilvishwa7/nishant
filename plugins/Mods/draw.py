@@ -2,7 +2,6 @@
 
 from pyrogram import Client, filters, types as t
 from plugins.helper.Utils import getText,paginate_models,ImageGeneration
-from bot import Models
 Database = {}
 
 @Client.on_message(filters.command(["draw","create","imagine","dream"]))
