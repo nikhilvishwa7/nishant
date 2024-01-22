@@ -5,7 +5,7 @@ from info import LOGGER
 from plugins.helper.Utils import identifyPlatform,DownloadMedia,getContentType
 
 
-@Client.on_message(filters.regex(pattern=LOGGER.mediaPattern))
+@Client.on_message(filters.regex(pattern=info.mediaPattern))
 @identifyPlatform
 async def media_downloader(_,m: t.Message):
     if m.url is None or m.platform is None:
