@@ -1,5 +1,7 @@
 import logging
 import logging.config
+import uvloop
+uvloop.install()
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
@@ -20,9 +22,25 @@ from datetime import date, datetime
 import pytz
 from aiohttp import web
 from plugins import web_server
+from lexica import Client as ApiClient
+from plugins.helper.Utils.telegraph import GraphClient
+
+StartTime = None
+Models = None
+
+TelegraphClient = GraphClient(
+    "LexicaAPI",
+    "https://t.me/LexicaAPI",
+    "LexicaAPI"
+)
+TelegraphClient.createAccount()
 
 class Bot(Client):
-
+    global StartTime,Models
+    StartTime = datetime.datetime.now()
+    api = ApiClient()
+    Models = api.getModels()['models']['image']
+    #print(Models)
     def __init__(self):
         super().__init__(
             name=SESSION,
