@@ -4,7 +4,7 @@ from pyrogram import Client, filters, types as t
 from bott import StartTime
 
 startText = """
-Just an AI/Utility bot by `@Qewertyy`.
+Just an AI/Utility bot by `@VeldXd`.
 Commands:
 `/draw`: create images
 `/upscale`: upscale your images
@@ -18,13 +18,13 @@ Commands:
 """
 
 @Client.on_message(filters.command(["ai","aihelp","repo","source"]))
-async def start(_: Client, m: t.Message):
+async def aihelp(_: Client, m: t.Message):
     await m.reply_text(
         startText,
         reply_markup=t.InlineKeyboardMarkup(
             [
                 [
-                    t.InlineKeyboardButton(text="Source",url="https://github.com/")
+                    t.InlineKeyboardButton(text="ᴍʏ ᴏᴡɴᴇʀ",url="https://t.me/veldxd")
                 ]
             ]
         )
