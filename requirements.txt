@@ -95,4 +95,3 @@ uvloop
 lexica-api
 httpx[http2]
 python-dotenv
-lexica.core_async
