@@ -57,15 +57,30 @@ openai==0.25.0
 python-telegram-bot==12.8
 doodstream
 unshortenit
+mdisky
 
 ### googletrans==4.0.0-rc1 ###
 python-decouple
 ytthumb
 YoutubeTags
-telebot==0.0.5
 
-faker
-telethon
+beautifulsoup4
+marshmallow==3.20.1
+motor
+python-docx
+speedtest
+yt-dlp
+python-dateutil
+google-generativeai
+datetime>=4.4
+psutil==5.9.4
+asyncio
+chardet
+urllib3
+pycryptodomex
+wheel
+six
+googlesearch-python
 spotipy
 scdl
 tqdm
@@ -83,14 +98,12 @@ youtube-search-python
 spotdl
 Pillow
 wget
+discord
 moviepy==1.0.3
 pydub
 shazamio
-google-generativeai
 
-bs4
-prettytable
-TgCrypto
+Pyrogram
 uvloop
 lexica-api
 httpx[http2]
