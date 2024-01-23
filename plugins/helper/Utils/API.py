@@ -1,6 +1,6 @@
 # Copyright 2023 Qewertyy, MIT License
 import asyncio,base64,mimetypes,os
-from lexica import AsyncClient
+from lexica.core_async import AsyncClient
 from lexica.constants import languageModels
 
 async def ImageGeneration(model,prompt):
