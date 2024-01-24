@@ -17,14 +17,14 @@ Commands:
 `/gemini`: gemini by google
 """
 
-@Client.on_message(filters.command(["ai","aihelp","repo","source"]))
+@Client.on_message(filters.command(["upscale","imagine","chatgpt","bard"]))
 async def aihelp(_: Client, m: t.Message):
     await m.reply_text(
         startText,
         reply_markup=t.InlineKeyboardMarkup(
             [
                 [
-                    t.InlineKeyboardButton(text="ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ",url="https://t.me/codeflix_bots")
+                    t.InlineKeyboardButton(text="ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴛʜɪs ʙᴏᴛ",url="https://t.me/DaisyProBot")
                 ]
             ]
         )
