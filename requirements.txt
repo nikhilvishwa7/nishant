@@ -103,9 +103,5 @@ pydub
 shazamio
 
 Pyrogram
-uvloop
-lexica-api
-httpx[http2]
-python-dotenv
 Faker
 telethon
