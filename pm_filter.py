@@ -1110,7 +1110,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except Exception as e:
             logger.exception(e)
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles4_{key}")
-
     
     elif query.data.startswith("del"):
         ident, file_id = query.data.split("#")
