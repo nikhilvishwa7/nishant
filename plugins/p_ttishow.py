@@ -9,7 +9,7 @@ from Script import script
 from pyrogram.errors import ChatAdminRequired
 import asyncio 
 
-"""-----------------------------------------https://t.me/TEAM_NETFLIX--------------------------------------"""
+"""----------------------------------------- https://github.com/NobiDeveloper/Nobita-Filter-Bot --------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -23,7 +23,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('Support', url='https://telegram.me/NobiDeveloperSupport')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -38,14 +38,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton('• ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ •', url="https://t.me/veldxd")
-                 ],[
-                    InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                    InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-                  ]]
+                    InlineKeyboardButton('🥷 ʜᴇʟᴘ 🥷', url='https://telegram.me/NobiDeveloperSupport'),
+                    InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', url='https://telegram.me/NobiDeveloper')
+                 ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title}\n\nᴅᴏɴ'ᴛ ꜰᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ. ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇꜱᴛɪᴏɴꜱ & ᴅᴏᴜʙᴛꜱ ᴀʙᴏᴜᴛ ᴜꜱɪɴɢ ᴍᴇ ᴄᴏɴᴛᴀᴄᴛ ꜰʀᴏᴍ ᴀᴅᴍɪɴ & ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ</b>",
+            text=f"<b>☤ ᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title}\n\n🤖 ᴅᴏɴ’ᴛ ꜰᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ 🤖\n\n🕵️ ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -56,16 +54,13 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                                                 video=(MELCOW_VID),
+                temp.MELCOW['welcome'] = await message.reply_photo(
+                                                 photo=(MELCOW_VID),
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                    InlineKeyboardButton('• ᴍᴇꜱꜱᴀɢᴇ ʜᴇʀᴇ •', url="https://t.me/veldxd")
-                 ],[
-                    InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                    InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-                  ]]
+                                                                           InlineKeyboardButton('ʀᴇᴀᴅ ɢʀᴏᴜᴘ ʀᴜʟᴇs 📌', url='https://telegra.ph/')
+                                                                        ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
                 )
@@ -73,10 +68,6 @@ async def save_group(bot, message):
         if settings["auto_delete"]:
             await asyncio.sleep(600)
             await (temp.MELCOW['welcome']).delete()
-                
-               
-
-
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -89,15 +80,12 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url="https://t.me/weebs_support"),
-            InlineKeyboardButton('Owner', url="https://t.me/Exotixe")
-        ],[
-            InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('Support', url='https://telegram.me/NobiDeveloperSupport')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
+            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b>',
             reply_markup=reply_markup,
         )
 
@@ -131,7 +119,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('Support', url='https://telegram.me/weebs_support')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -141,7 +129,6 @@ async def disable_chat(bot, message):
         await bot.leave_chat(chat_)
     except Exception as e:
         await message.reply(f"Error - {e}")
-
 
 @Client.on_message(filters.command('enable') & filters.user(ADMINS))
 async def re_enable_chat(bot, message):
@@ -161,7 +148,6 @@ async def re_enable_chat(bot, message):
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
-
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
@@ -173,7 +159,6 @@ async def get_ststs(bot, message):
     size = get_size(size)
     free = get_size(free)
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
-
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
@@ -194,7 +179,6 @@ async def gen_invite(bot, message):
 
 @Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/GetTGLink/4185
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -224,8 +208,6 @@ async def ban_a_user(bot, message):
         temp.BANNED_USERS.append(k.id)
         await message.reply(f"Successfully banned {k.mention}")
 
-
-    
 @Client.on_message(filters.command('unban') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
     if len(message.command) == 1:
@@ -257,11 +239,8 @@ async def unban_a_user(bot, message):
         temp.BANNED_USERS.remove(k.id)
         await message.reply(f"Successfully unbanned {k.mention}")
 
-
-    
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
