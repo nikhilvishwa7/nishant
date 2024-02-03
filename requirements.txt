@@ -102,7 +102,7 @@ moviepy==1.0.3
 pydub
 shazamio
 
-Pyrogram
+pyrogram>=2.0.106
 Faker
 telethon
 wikipedia
