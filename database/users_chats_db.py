@@ -1,5 +1,7 @@
 import motor.motor_asyncio
-from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, TUTORIAL, IS_TUTORIAL, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK
+from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL
+import datetime
+import pytz
 
 class Database:
     
@@ -8,7 +10,16 @@ class Database:
         self.db = self._client[database_name]
         self.col = self.db.users
         self.grp = self.db.groups
-
+        self.users = self.db.uersz
+        self.req = self.db.requests
+        
+    async def find_join_req(self, id):
+        return bool(await self.req.find_one({'id': id}))
+        
+    async def add_join_req(self, id):
+        await self.req.insert_one({'id': id})
+    async def del_join_req(self):
+        await self.req.drop()
 
     def new_user(self, id, name):
         return dict(
@@ -30,23 +41,6 @@ class Database:
                 reason="",
             ),
         )
-    
-    async def update_verification(self, id, date, time):
-        status = {
-            'date': str(date),
-            'time': str(time)
-        }
-        await self.col.update_one({'id': int(id)}, {'$set': {'verification_status': status}})
-
-    async def get_verified(self, id):
-        default = {
-            'date': "1999-12-31",
-            'time': "23:59:59"
-        }
-        user = await self.col.find_one({'id': int(id)})
-        if user:
-            return user.get("verification_status", default)
-        return default
     
     async def add_user(self, id, name):
         user = self.new_user(id, name)
@@ -166,5 +160,55 @@ class Database:
     async def get_db_size(self):
         return (await self.db.command("dbstats"))['dataSize']
 
+    async def get_user(self, user_id):
+        user_data = await self.users.find_one({"id": user_id})
+        return user_data
+    async def update_user(self, user_data):
+        await self.users.update_one({"id": user_data["id"]}, {"$set": user_data}, upsert=True)
 
+    async def has_premium_access(self, user_id):
+        user_data = await self.get_user(user_id)
+        if user_data:
+            expiry_time = user_data.get("expiry_time")
+            if expiry_time is None:
+                # User previously used the free trial, but it has ended.
+                return False
+            elif isinstance(expiry_time, datetime.datetime) and datetime.datetime.now() <= expiry_time:
+                return True
+            else:
+                await self.users.update_one({"id": user_id}, {"$set": {"expiry_time": None}})
+        return False
+        
+    async def update_user(self, user_data):
+        await self.users.update_one({"id": user_data["id"]}, {"$set": user_data}, upsert=True)
+
+    async def update_one(self, filter_query, update_data):
+        try:
+            # Assuming self.client and self.users are set up properly
+            result = await self.users.update_one(filter_query, update_data)
+            return result.matched_count == 1
+        except Exception as e:
+            print(f"Error updating document: {e}")
+            return False
+
+    async def get_expired(self, current_time):
+        expired_users = []
+        if data := self.users.find({"expiry_time": {"$lt": current_time}}):
+            async for user in data:
+                expired_users.append(user)
+        return expired_users
+
+    async def remove_premium_access(self, user_id):
+        return await self.update_one(
+            {"id": user_id}, {"$set": {"expiry_time": None}}
+        )
+
+    async def give_free_trial(self, userid):
+        #await set_free_trial_status(user_id)
+        user_id = userid
+        seconds = 5*60         
+        expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+        user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
+        await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
+        
 db = Database(DATABASE_URI, DATABASE_NAME)
