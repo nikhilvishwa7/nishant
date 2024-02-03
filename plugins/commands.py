@@ -959,7 +959,7 @@ async def deletemultiplefiles(bot, message):
         parse_mode=enums.ParseMode.HTML
     )
 
-@Client.on_message(filters.command("shortlink"))
+@Client.on_message(filters.command("set_shortlink"))
 async def shortlink(bot, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -1064,39 +1064,249 @@ async def showshortlink(bot, message):
             return await message.reply_text("Shortener url and Tutorial Link Not Connected. Check this commands, /shortlink and /set_tutorial")
 
 
-@Client.on_message(filters.command("set_tutorial"))
-async def settutorial(bot, message):
+@Client.on_message(filters.command('get_custom_settings'))
+async def get_custom_settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
     chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text("This Command Work Only in group\n\nTry it in your own group")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    userid = message.from_user.id
-    user = await bot.get_chat_member(grpid, userid)
-    if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
-        return
-    else:
-        pass
-    if len(message.command) == 1:
-        return await message.reply("<b>Give me a tutorial link along with this command\n\nCommand Usage: /set_tutorial your tutorial link</b>")
-    elif len(message.command) == 2:
-        reply = await message.reply_text("<b>Please Wait...</b>")
-        tutorial = message.command[1]
-        await save_group_settings(grpid, 'tutorial', tutorial)
-        await save_group_settings(grpid, 'is_tutorial', True)
-        await reply.edit_text(f"<b>Successfully Added Tutorial\n\nHere is your tutorial link for your group {title} - <code>{tutorial}</code></b>")
-    else:
-        return await message.reply("<b>You entered Incorrect Format\n\nFormat: /set_tutorial your tutorial link</b>")
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group...')    
+    settings = await get_settings(grp_id)
+    text = f"""Custom settings for: {title}
+
+Shortlink URL: {settings["url"]}
+Shortlink API: {settings["api"]}
+
+IMDb Template: {settings['template']}
+
+File Caption: {settings['caption']}
+
+Welcome Text: {settings['welcome_text']}
+
+Tutorial Link: {settings['tutorial']}
+
+Force Channels: {str(settings['fsub'])[1:-1] if settings['fsub'] else 'Not Set'}"""
+
+    btn = [[
+        InlineKeyboardButton(text="Close", callback_data="close_data")
+    ]]
+    await message.reply_text(text, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+
+@Client.on_message(filters.command('set_welcome'))
+async def save_welcome(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")      
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    try:
+        welcome = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text("Command Incomplete!")    
+    await save_group_settings(grp_id, 'welcome_text', welcome)
+    await message.reply_text(f"Successfully changed welcome for {title} to\n\n{welcome}")
         
-@Client.on_message(filters.command("restart") & filters.user(ADMINS))
-async def stop_button(bot, message):
-    msg = await bot.send_message(text="**🔄 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙴𝚂 𝚂𝚃𝙾𝙿𝙴𝙳. 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶...**", chat_id=message.chat.id)       
-    await asyncio.sleep(3)
-    await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
-    os.execl(sys.executable, sys.executable, *sys.argv)
+@Client.on_message(filters.command('delete') & filters.user(ADMINS))
+async def delete_file(bot, message):
+    try:
+        query = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text("Command Incomplete!\nUsage: /delete query")
+    msg = await message.reply_text('Searching...')
+    total, files = await delete_files(query)
+    if int(total) == 0:
+        return await msg.edit('Not have files in your query')
+    btn = [[
+        InlineKeyboardButton("YES", callback_data=f"delete_{query}")
+    ],[
+        InlineKeyboardButton("CLOSE", callback_data="close_data")
+    ]]
+    await msg.edit(f"Total {total} files found in your query {query}.\n\nDo you want to delete?", reply_markup=InlineKeyboardMarkup(btn))
+ 
+@Client.on_message(filters.command('delete_all') & filters.user(ADMINS))
+async def delete_all_index(bot, message):
+    btn = [[
+        InlineKeyboardButton(text="YES", callback_data="delete_all")
+    ],[
+        InlineKeyboardButton(text="CLOSE", callback_data="close_data")
+    ]]
+    files = await Media.count_documents()
+    if int(files) == 0:
+        return await message.reply_text('Not have files to delete')
+    await message.reply_text(f'Total {files} files have.\nDo you want to delete all?', reply_markup=InlineKeyboardMarkup(btn))
+
+@Client.on_message(filters.command('set_tutorial'))
+async def set_tutorial(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")       
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    try:
+        tutorial = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text("Command Incomplete!")   
+    await save_group_settings(grp_id, 'tutorial', tutorial)
+    await message.reply_text(f"Successfully changed tutorial for {title} to\n\n{tutorial}")
+
+@Client.on_message(filters.command('set_fsub'))
+async def set_fsub(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")      
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    vp = message.text.split(" ", 1)[1]
+    if vp.lower() in ["Off", "off", "False", "false", "Turn Off", "turn off"]:
+        await save_group_settings(grp_id, 'is_fsub', False)
+        return await message.reply_text("Successfully Turned Off !")
+    elif vp.lower() in ["On", "on", "True", "true", "Turn On", "turn on"]:
+        await save_group_settings(grp_id, 'is_fsub', True)
+        return await message.reply_text("Successfully Turned On !")
+    try:
+        ids = message.text.split(" ", 1)[1]
+        fsub_ids = list(map(int, ids.split()))
+    except IndexError:
+        return await message.reply_text("Command Incomplete!\n\nCan multiple channel add separate by spaces. Like: /set_fsub id1 id2 id3")
+    except ValueError:
+        return await message.reply_text('Make sure ids is integer.')        
+    channels = "Channels:\n"
+    for id in fsub_ids:
+        try:
+            chat = await client.get_chat(id)
+        except Exception as e:
+            return await message.reply_text(f"{id} is invalid!\nMake sure this bot admin in that channel.\n\nError - {e}")
+        if chat.type != enums.ChatType.CHANNEL:
+            return await message.reply_text(f"{id} is not channel.")
+        channels += f'{chat.title}\n'
+    await save_group_settings(grp_id, 'fsub', fsub_ids)
+    await message.reply_text(f"Successfully set force channels for {title} to\n\n{channels}")
+
+@Client.on_message(filters.command('tgm'))
+async def tgm(bot, message):
+    reply_to_message = message.reply_to_message
+    if not reply_to_message:
+        return await message.reply('Reply to any photo or video.')
+    file = reply_to_message.photo or reply_to_message.video or None
+    if file is None:
+        return await message.reply('Invalid media.')
+    if file.file_size >= 5242880:
+        await message.reply_text(text="Send less than 5MB")   
+        return
+    text = await message.reply_text(text="ᴘʀᴏᴄᴇssɪɴɢ....")   
+    media = await reply_to_message.download()  
+    try:
+        response = upload_file(media)
+    except Exception as e:
+        await text.edit_text(text=f"Error - {e}")
+        return    
+    try:
+        os.remove(media)
+    except:
+        pass
+    await text.edit_text(f"<b>❤️ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴄᴏᴍᴘʟᴇᴛᴇᴅ 👇</b>\n\n<code>https://telegra.ph/{response[0]}</code></b>")
+
+@Client.on_message(filters.command('pong'))
+async def pong(client, message):
+    start_time = time.monotonic()
+    msg = await message.reply("👀")
+    end_time = time.monotonic()
+    await msg.edit(f'{round((end_time - start_time) * 1000)} ms')
+    
+@Client.on_message(filters.command("add_premium"))
+async def give_premium_cmd_handler(client, message):
+    if message.from_user.id not in ADMINS:
+        return
+    if len(message.command) == 3:
+        user_id = int(message.command[1])  # Convert the user_id to integer
+        time = message.command[2]        
+        seconds = await get_seconds(time)
+        if seconds > 0:
+            expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+            user_data = {"id": user_id, "expiry_time": expiry_time} 
+            await db.update_user(user_data)  # Use the update_user method to update or insert user data
+            await message.reply_text("Premium access added to the user.")
+            
+            await client.send_message(
+                chat_id=user_id,
+                text=f"<b>ᴘʀᴇᴍɪᴜᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ꜰᴏʀ {time} ᴇɴᴊᴏʏ 😀\n</b>",                
+            )
+        else:
+            await message.reply_text("Invalid time format. Please use '1day for days', '1hour for hours', or '1min for minutes', or '1month for months' or '1year for year'")
+    else:
+        await message.reply_text("<b>Usage: /add_premium user_id time \n\nExample /add_premium 1252789 10day \n\n(e.g. for time units '1day for days', '1hour for hours', or '1min for minutes', or '1month for months' or '1year for year')</b>")
+        
+@Client.on_message(filters.command("remove_premium"))
+async def remove_premium_cmd_handler(client, message):
+    if message.from_user.id not in ADMINS:
+        return
+    if len(message.command) == 2:
+        user_id = int(message.command[1])  # Convert the user_id to integer
+      #  time = message.command[2]
+        time = "1s"
+        seconds = await get_seconds(time)
+        if seconds > 0:
+            expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+            user_data = {"id": user_id, "expiry_time": expiry_time}  # Using "id" instead of "user_id"
+            await db.update_user(user_data)  # Use the update_user method to update or insert user data
+            await message.reply_text("Premium access removed to the user.")
+            await client.send_message(
+                chat_id=user_id,
+                text=f"<b>premium removed by admins \n\n Contact Admin if this is mistake \n\n 👮 Admin : @sewxiy \n</b>",                
+            )
+        else:
+            await message.reply_text("Invalid time format.'")
+    else:
+        await message.reply_text("Usage: /remove_premium user_id")
+        
+@Client.on_message(filters.command("plans"))
+async def plans_cmd_handler(client, message):                
+    btn = [            
+        [InlineKeyboardButton("ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ʀᴇᴄᴇɪᴘᴛ 🧾", url="t.me/sewxiy")],
+        [InlineKeyboardButton("⚠️ ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ ⚠️", callback_data="close_data")]
+    ]
+    reply_markup = InlineKeyboardMarkup(btn)
+    await message.reply_photo(
+        photo=PAYMENT_QR,
+        caption="**Pʀᴇᴍɪᴜᴍ Fᴇᴀᴛᴜʀᴇs 🎁\n\n☆ No Need To Verify\n☆ Ad Free Experience\n☆ Unlimited Movie And Series",
+        reply_markup=reply_markup
+    )
+        
+@Client.on_message(filters.command("my_plan"))
+async def check_plans_cmd(client, message):
+    user_id  = message.from_user.id
+    if await db.has_premium_access(user_id):         
+        remaining_time = await db.check_remaining_uasge(user_id)             
+        expiry_time = remaining_time + datetime.datetime.now()
+        await message.reply_text(f"**Your plans details are :\n\nRemaining Time : {remaining_time}\n\nExpirytime : {expiry_time}**")
+    else:
+        btn = [ 
+            [InlineKeyboardButton("ɢᴇᴛ ғʀᴇᴇ ᴛʀᴀɪʟ ғᴏʀ 𝟻 ᴍɪɴᴜᴛᴇꜱ ☺️", callback_data="get_trail")],
+            [InlineKeyboardButton("ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅs", callback_data="buy_premium")],
+            [InlineKeyboardButton("⚠️ ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ ⚠️", callback_data="close_data")]
+        ]
+        reply_markup = InlineKeyboardMarkup(btn)
+        m=await message.reply_sticker("CAACAgIAAxkBAAIBTGVjQbHuhOiboQsDm35brLGyLQ28AAJ-GgACglXYSXgCrotQHjibHgQ")         
+        await message.reply_text(f"**😢 You Don't Have Any Premium Subscription.\n\n Check Out Our Premium /plans**",reply_markup=reply_markup)
+        await asyncio.sleep(2)
+        await m.delete()
