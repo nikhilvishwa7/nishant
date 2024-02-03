@@ -205,7 +205,7 @@ class Database:
         seconds = 5*60         
         expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
         user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
-        await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True
+        await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
 
 
 db = Database(DATABASE_URI, DATABASE_NAME)
