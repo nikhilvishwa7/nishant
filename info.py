@@ -40,6 +40,7 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/d9221f67d9ba1e983
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/c9b2b779d44668f61f770.jpg")
 VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/81a02333bdcb58f891785.jpg")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/331b8593155e9fcc741ba.jpg')
 SP = (environ.get('SP', 'https://graph.org/file/a0c2ab09ea6d665deb174.jpg https://graph.org/file/769aee62c9fbfd58fe7c0.jpg')).split()
 
 # Admins, Channels & Users
