@@ -2776,7 +2776,7 @@ async def auto_filter(client, msg, spoll=False):
     #         InlineKeyboardButton('❗❗  ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  ❗❗', url="https://t.me/How_to_Download_7x/26")
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton('❗❗  ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  ❗❗', url="https://t.me/How_to_Download_7x/26")
+            InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/How_to_Download_7x/26")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
