@@ -5,7 +5,7 @@
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from info import ADMINS, LOG_CHANNEL
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT_ID
 import asyncio
 
 @Client.on_message(filters.private & filters.command("admin"))
@@ -22,7 +22,7 @@ async def forward_message_to_group(client, message):
  except Exception as e:
     await message.reply_text(f"error{e}")
 
-@Client.on_message(filters.command("ans", "!") & filters.user(ADMINS) & filters.chat(int(LOG_CHANNEL)))
+@Client.on_message(filters.command("ans", "!") & filters.user(ADMINS) & filters.chat(int(SUPPORT_CHAT_ID)))
 async def reply_to_forwarded_message(client, message:Message):
  try: 
     mrtg = message.text.split(" ", 2)
