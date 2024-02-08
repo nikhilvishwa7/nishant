@@ -30,7 +30,7 @@ OWNER_ID = environ.get('OWNER_ID', '6497757690')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # for eval function, work only in a specific group
-EVAL_ID = int(os.environ.get("EVAL_ID", "-1001566837125"))
+EVAL_ID = environ.get("EVAL_ID", "-1001566837125")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 99999))
