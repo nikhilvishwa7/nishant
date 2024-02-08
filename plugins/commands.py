@@ -559,6 +559,16 @@ async def delete(bot, message):
             else:
                 await msg.edit('File not found in database')
 
+@Client.on_message(filters.command("support"))
+async def support_command(client, message):
+    buttons = [
+        [
+            InlineKeyboardButton("📢 Support Group", url="https://t.me/weebs_support"),
+            InlineKeyboardButton("📢 Support Channel", url="https://t.me/codeflix_bots")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_text(text=script.SUPPORT_TXT, reply_markup=reply_markup)
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
