@@ -813,6 +813,25 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
 
+@Client.on_message(filters.command('set_caption'))
+async def save_caption(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")      
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    try:
+        caption = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text("Command Incomplete!") 
+    await save_group_settings(grp_id, 'caption', caption)
+    await message.reply_text(f"Successfully changed caption for {title} to\n\n{caption}")
+
 
 @Client.on_message((filters.command(["request", "Request"]) | filters.regex("#request") | filters.regex("#Request")) & filters.group)
 async def requests(bot, message):
@@ -1058,6 +1077,96 @@ async def showshortlink(bot, message):
         else:
             return await message.reply_text("Shortener url and Tutorial Link Not Connected. Check this commands, /shortlink and /set_tutorial")
 
+@Client.on_message(filters.command('set_fsub'))
+async def set_fsub(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")      
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    vp = message.text.split(" ", 1)[1]
+    if vp.lower() in ["Off", "off", "False", "false", "Turn Off", "turn off"]:
+        await save_group_settings(grp_id, 'is_fsub', False)
+        return await message.reply_text("Successfully Turned Off !")
+    elif vp.lower() in ["On", "on", "True", "true", "Turn On", "turn on"]:
+        await save_group_settings(grp_id, 'is_fsub', True)
+        return await message.reply_text("Successfully Turned On !")
+    try:
+        ids = message.text.split(" ", 1)[1]
+        fsub_ids = list(map(int, ids.split()))
+    except IndexError:
+        return await message.reply_text("Command Incomplete!\n\nCan multiple channel add separate by spaces. Like: /set_fsub id1 id2 id3")
+    except ValueError:
+        return await message.reply_text('Make sure ids is integer.')        
+    channels = "Channels:\n"
+    for id in fsub_ids:
+        try:
+            chat = await client.get_chat(id)
+        except Exception as e:
+            return await message.reply_text(f"{id} is invalid!\nMake sure this bot admin in that channel.\n\nError - {e}")
+        if chat.type != enums.ChatType.CHANNEL:
+            return await message.reply_text(f"{id} is not channel.")
+        channels += f'{chat.title}\n'
+    await save_group_settings(grp_id, 'fsub', fsub_ids)
+    await message.reply_text(f"Successfully set force channels for {title} to\n\n{channels}")
+
+
+@Client.on_message(filters.command('get_custom_settings'))
+async def get_custom_settings(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group...')    
+    settings = await get_settings(grp_id)
+    text = f"""Custom settings for: {title}
+
+Shortlink URL: {settings["url"]}
+Shortlink API: {settings["api"]}
+
+IMDb Template: {settings['template']}
+
+File Caption: {settings['caption']}
+
+Welcome Text: {settings['welcome_text']}
+
+Tutorial Link: {settings['tutorial']}
+
+Force Channels: {str(settings['fsub'])[1:-1] if settings['fsub'] else 'Not Set'}"""
+
+    btn = [[
+        InlineKeyboardButton(text="Close", callback_data="close_data")
+    ]]
+    await message.reply_text(text, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+
+@Client.on_message(filters.command('set_welcome'))
+async def save_welcome(client, message):
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
+    chat_type = message.chat.type
+    if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return await message.reply_text("Use this command in group.")      
+    grp_id = message.chat.id
+    title = message.chat.title
+    if not await is_check_admin(client, grp_id, message.from_user.id):
+        return await message.reply_text('You not admin in this group.')
+    try:
+        welcome = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text("Command Incomplete!")    
+    await save_group_settings(grp_id, 'welcome_text', welcome)
+    await message.reply_text(f"Successfully changed welcome for {title} to\n\n{welcome}")
 
 @Client.on_message(filters.command("set_tutorial"))
 async def settutorial(bot, message):
