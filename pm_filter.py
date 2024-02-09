@@ -1664,9 +1664,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "special":
         buttons = [[
-            InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ ᴍᴏᴅ1', callback_data='special_mod1'),
-            InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ ᴍᴏᴅ2', callback_data='special_mod2'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ ᴍᴏᴅ', callback_data='extra_mod')
+            InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ 1', callback_data='special_mod1'),
+            InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ 2', callback_data='special_mod2'),
+            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra_mod')
         ], [
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help2')
         ]]
@@ -2452,7 +2452,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/+fAjYIpR5Ju02M2Q1"),
             InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/+KeFIjHXhzLMyMWZl")
        ],[
-            InlineKeyboardButton('• ᴋᴏʀᴇᴀɴ ᴅʀᴀᴍᴀs •', url="https://t.me/+EjBZ70D4ha8wNWY9")
+            InlineKeyboardButton('• ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ •', url="https://t.me/anime_cruise_netflix")
        ],[ 
             InlineKeyboardButton('⌫ ʙᴀᴄᴋ', callback_data='start')
         ]]
