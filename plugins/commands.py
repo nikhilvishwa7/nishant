@@ -563,8 +563,8 @@ async def delete(bot, message):
 async def support_command(client, message):
     buttons = [
         [
-            InlineKeyboardButton("📢 Support Group", url="https://t.me/weebs_support"),
-            InlineKeyboardButton("📢 Support Channel", url="https://t.me/codeflix_bots")
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/weebs_support"),
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url="https://t.me/codeflix_bots")
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
