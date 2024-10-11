@@ -26,7 +26,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '11948995'))
 API_HASH = environ.get('API_HASH', 'cdae9279d0105638165415bf2769730d')
-OWNER_ID = environ.get('OWNER_ID', '5149183428')
+OWNER_ID = environ.get('OWNER_ID', '5149183428 1371807165')
 BOT_TOKEN = environ.get('BOT_TOKEN', "5907708034:AAELxpZFtM04aNyXCqZ5EZ7aSlzy-hr-Cnk")
 
 # for eval function, work only in a specific group
@@ -36,8 +36,8 @@ EVAL_ID = environ.get("EVAL_ID", "-1001537820228")
 CACHE_TIME = int(environ.get('CACHE_TIME', 99999))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/ada3dbc9c7ec0f975a5d8.jpg https://graph.org/file/f7bc09531f6f3c0e2a595.jpg https://graph.org/file/0a55de10d0ae5fb2f516f.jpg https://graph.org/file/596fd4de016865b864164.jpg https://graph.org/file/2205007d094c9b28d39dd.jpg https://graph.org/file/1fc023ae0e8bb6b61cff0.jpg https://graph.org/file/d4f60834f4b836230c4d0.jpg https://graph.org/file/6c917ac3502cd37a5030b.jpg https://graph.org/file/ddef5154e8a7753a92b8e.jpg https://graph.org/file/bf634e576530322140504.jpg https://graph.org/file/1281fab3aea387b207716.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/41a08d01363c18ca909f1.jpg")
+PICS = (environ.get('PICS', 'https://envs.sh/np8.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/np8.jpg")
 SRC_IMG = environ.get("SRC_IMG", "https://graph.org/file/769aee62c9fbfd58fe7c0.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/d9221f67d9ba1e983b5de.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
@@ -47,7 +47,7 @@ SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/331b8593155e
 SP = (environ.get('SP', 'https://graph.org/file/a0c2ab09ea6d665deb174.jpg https://graph.org/file/769aee62c9fbfd58fe7c0.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5149183428').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5149183428 1371807165').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -69,8 +69,8 @@ COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 PREFIX = environ.get("PREFIX", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rosie:pm4G5cnwShq4qeW7@cluster0.0iv7kbi.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://RoyalDwip:RoyalDwip@cluster0.0sp6pvf.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Elsassa")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
@@ -88,27 +88,27 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '240af286612ebee3a4a330c6b822142000efd044')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', '')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'modijiurl.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'f3e228611158e13010a422b5f62fae08e872a930')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'modijiurl.com')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'f3e228611158e13010a422b5f62fae08e872a930')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 RemoveBG_API = environ.get("RemoveBG_API", "BBfqJQTBznNFqg4R7VESNW46")
-BOT_USERNAME = environ.get("BOT_USERNAME", "Lucy_Filter_bot")
+BOT_USERNAME = environ.get("BOT_USERNAME", "Ardenn_bot")
 BOT_NAME = environ.get("BOT_NAME", "𝐋ᴜᴄʏ")
-NETWORK_USERNAME = environ.get("NETWORK_USERNAME", "team_netflix")
-S_GROUP = environ.get('S_GROUP', "weebs_support")
-S_CHANNEL = environ.get('S_CHANNEL', "codeflix_bots")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movie7xchat')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/team_netflix')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_Download_7x/26')
+NETWORK_USERNAME = environ.get("NETWORK_USERNAME", "Ardenn_bot")
+S_GROUP = environ.get('S_GROUP', "jb_corporatioonn")
+S_CHANNEL = environ.get('S_CHANNEL', "jb_corporatioonn")
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+fUv8WckDL7kwZWY1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/jb_corporatioonn')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/how_to_download_linkkss')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', 'ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴏᴅᴇғʟɪx ʙᴏᴛs')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001537820228'))
+MSG_ALRT = environ.get('MSG_ALRT', 'Powered By @ryzer09')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001606185333'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'weebs_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
@@ -123,7 +123,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001537820228')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001606185333')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
