@@ -28,8 +28,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• sᴇʀɪᴇs ғʟɪx •', url="https://t.me/netflix_complex"),
-                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ғʟɪx •', url='https://t.me/movieflix_original')
+                    InlineKeyboardButton('• sᴇʀɪᴇs ғʟɪx •', url="https://t.me/+fUv8WckDL7kwZWY1"),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ғʟɪx •', url='https://t.me/jb_corporatioonn')
                 ],[
                     InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url=CHNL_LNK)
                   ]]
