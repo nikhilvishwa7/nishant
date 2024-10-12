@@ -9,7 +9,7 @@ from Script import script
 from pyrogram.errors import ChatAdminRequired
 import asyncio 
 
-"""----------------------------------------- https://t.me/codeflix_bots --------------------------------------"""
+"""----------------------------------------- https://t.me/+g1YV0iHUSQFlYjM9 --------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -23,7 +23,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url='https://telegram.me/weebs_Support')
+                InlineKeyboardButton('Support', url='https://t.me/+g1YV0iHUSQFlYjM9')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -38,8 +38,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://telegram.me/weebs_Support'),
-                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ', url='https://telegram.me/codeflix_bots')
+                    InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/+g1YV0iHUSQFlYjM9'),
+                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/+g1YV0iHUSQFlYjM9')
                  ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -80,7 +80,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url='https://telegram.me/weebs_support')
+            InlineKeyboardButton('Support', url='https://t.me/+g1YV0iHUSQFlYjM9')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
